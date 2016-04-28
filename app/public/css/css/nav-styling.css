@@ -1,0 +1,30 @@
+
+/*.inner-menu ul li .active {*/
+    /*background-color: #0c4d78;*/
+/*}*/
+
+.selected {
+    background-color: red;
+}
+
+.menu a:hover {
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+}
+
+.action a:hover {
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+    padding: 4px;
+
+}
+
+.h6 a:hover {
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+    padding: 4px;
+
+}

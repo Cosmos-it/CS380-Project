@@ -1,0 +1,14 @@
+input.ng-invalid.ng-touched {
+    border: 1px solid #cf2a0e;
+}
+input .ng-valid.ng-touched {
+    border: 1px solid #009900;
+}
+.validationError {
+    color: #cf2a0e;
+    text-align: center;
+}
+
+button .ng-invalid {
+    background-color: gray;
+}

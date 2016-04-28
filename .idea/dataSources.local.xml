@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - roomly_space@localhost" uuid="0bdddeae-66b6-4635-b939-fa7cb2fc6472">
+      <secret-storage>master_key</secret-storage>
+      <user-name>roomly_space</user-name>
+      <schema-pattern>roomly_space.*</schema-pattern>
+      <default-schemas>roomly_space.*</default-schemas>
+    </data-source>
+  </component>
+</project>
