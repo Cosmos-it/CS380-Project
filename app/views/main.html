@@ -1,0 +1,40 @@
+<!-- START OF MAIN CONTENT-->
+
+<div ng-controller="mainController">
+
+    <!------ ORBIT OR CAROUSEL OR IMAGE SLIDER ----->
+    <section class="orbit" role="region" aria-label="Favorite Space Pictures">
+        <div class="back-color orbit-container ">
+            <div class="orbit-container">
+                <div class="orbit-slide slider-size">
+                    <img src="public/img/ideal-place.jpg">
+                </div>
+            </div>
+        </div>
+
+        <section class="caption">
+            <div class="row">
+                <div class="column">
+                    <div class="tt">
+                        <h1 class="h1">WELCOME TO ROOMLY SPACE</h1>
+                        <h5 class="h5">Looking for a place or someone to be your roommate? <a href="#authsignup">Start
+                            here</a></h5>
+                        <div class="row">
+                            <div class="column small-10 small-centered">
+                                <input class="search shadow-search" type="search"
+                                       placeholder="Type here: Search by roommate, room, apartment, price, location">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- END OF ORBIT OR CAROUSEL OR IMAGE SLIDER -->
+</div>
+
+<section ng-include="'views/featured-main.html'"></section>
+
+<!-- Footer  -->
+<div ng-include="'views/footer.html'"></div>
+<!-- End of footer  -->
