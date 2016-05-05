@@ -75,8 +75,25 @@ function decode_message($stringText)
     } else {
         base64_decode($stringText);
     }
-
-
 }
 
+
+function displayData()
+{
+    global $connection;
+    $sql = 'SELECT * FROM apt_table';
+    //Performing mysql query
+    $result = mysqli_query($connection, $sql);
+    if (!$result) {
+        die("Database query failed");
+    }
+
+    //New data converted into array
+    $array_data = array();
+    while ($row = mysqli_fetch_assoc($result)) {
+        $array_data[] = $row;
+    }
+
+    return $array_data;
+}
 

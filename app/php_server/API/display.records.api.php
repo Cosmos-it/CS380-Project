@@ -30,51 +30,22 @@ $connection = $databaseInstance->getConnection();
  * @param $connection
  */
 
+display();
+
 /* Method calling */
-//addInfo($connection);
-
-displayData($connection);
-
-
-
-function displayData($connection)
-{
-    $sql = 'SELECT * FROM apt_table';
-    //Performing mysql query
-    $result = mysqli_query($connection, $sql);
-    if (!$result) {
-        die("Database query failed");
-    }
-
-    //New data converted into array
-    $array_data = array();
-    while ($row = mysqli_fetch_assoc($result)) {
-        $array_data[] = $row;
-    }
-
-    //encode the data into array.
-    $json = json_encode($array_data);
-    echo $json;
-
-
-    //Close database after successful connection
-    if (isset($connection)) {
-        mysqli_close($connection);
+function display() {
+    $data = displayData();
+    foreach ($data as $item) {
+        echo "Apartment name: " . $item['name'] . " | Bed Room: " . $item['rooms'] .
+            " | Pets: " . $item['pets'] . " | Lease term: " . $item['lease'] .
+            " | Cost: " . $item['cost'] . " | Address " . $item['address'] . "<br>\n";
     }
 }
-
 
 //Update the information
-function updateInfo()
-{
+function updateInfo() { }
 
-}
-
-function deleteById()
-{
-
-
-}
+function deleteById() {}
 
 function addInfo($connection)
 {
