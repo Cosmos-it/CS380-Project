@@ -11,7 +11,7 @@
 html body {
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
-    background-color: #F8F8F8;
+    /*background-color: #F8F8F8;*/
 }
 
 
@@ -99,9 +99,9 @@ body {
     /*width: 100%;*/
 }
 
-.search {
-    background-color: white;
-}
+/*.search {*/
+    /*background-color: white;*/
+/*}*/
 
 .featured {
     margin-top: 50px;
@@ -279,12 +279,22 @@ input[type="search"] {
 .card {
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     color: #272727;
     border-radius: 4px;
     background-color: #ffffff;
     margin-bottom: 10px;
+    border: 1px solid lightgrey;
 
+}
+
+.card:hover {
+    box-shadow: 0 1px 2px 0 gray, 0 1px 2px 0 gray;
+
+}
+
+.card {
+    display: inherit;
+    width: 100%;
 }
 
 .card .title {
@@ -330,4 +340,13 @@ input[type="search"] {
 
 .card .image img {
     border-radius: 2px 2px 0 0;
+}
+
+
+/* Select styling */
+
+.select1, .select2, .select3{
+    display: inline-table;
+    width: 250px;
+
 }

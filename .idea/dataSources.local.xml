@@ -7,5 +7,11 @@
       <schema-pattern>roomly_space.*</schema-pattern>
       <default-schemas>roomly_space.*</default-schemas>
     </data-source>
+    <data-source name="MySQL - apartmentDB@localhost" uuid="c7fc76d1-7983-4582-87a2-6fe8aa31591a">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>apartmentDB.*</schema-pattern>
+      <default-schemas>apartmentDB.*</default-schemas>
+    </data-source>
   </component>
 </project>

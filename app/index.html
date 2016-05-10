@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="public/css/css/inbox-css.css">
     <link rel="stylesheet" href="public/css/css/sign-register.css">
     <link rel="stylesheet" href="public/css/css/nav-styling.css">
-
     <link type="text/css" rel="stylesheet"
           href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css"/>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Playfair+Display|Crete+Round' rel='stylesheet'
@@ -20,8 +19,27 @@
     <script src="public/angular-js/bower_components/angular/angular.min.js"></script>
     <script src="public/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
+
+    <style>
+        div:hover > select {
+            display: block;
+            background: #f9f9f9;
+            border-top: 1px solid purple;
+        }
+
+        div:hover > select > option {
+            padding: 5px;
+            border-bottom: 1px solid #4f4f4f;
+        }
+
+        div:hover > select > option:hover {
+            background: white;
+        }
+
+    </style>
+
 </head>
-<body ng-app="roomly" style="background-color: darkcyan">
+<body ng-app="roomly">
 
 <!-------------------------------------------------------------------------->
 
@@ -34,16 +52,7 @@
 
 <!------------- Main content ------->
 <div ui-view class="view">
-    <div class="row">
 
-        <!-- FEATURED DATA ON MAIN -->
-
-
-        <!-- END OF FEATURED DATA AND MAIN -->
-
-
-
-    </div>
 </div>
 
 <!------------ End of Main content ----------->
@@ -56,6 +65,7 @@
 <script src="public/css/js/vendor/jquery.min.js"></script>
 <script src="public/css/js/bower_components/jquery-ui/jquery-ui.min.js"></script>
 <script src="public/css/js/foundation.min.js"></script>
+
 
 <script src="public/css/js/foundation.min.js"></script>
 <script src="public/js/app.js"></script>

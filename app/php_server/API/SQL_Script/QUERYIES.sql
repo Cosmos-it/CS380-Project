@@ -68,13 +68,6 @@ CREATE TABLE apartment (
 );
 
 
-
-
-
-
-
-
-
 # Accounts
 CREATE TABLE Account (
   _AccountID      INT UNIQUE NOT NULL AUTO_INCREMENT,

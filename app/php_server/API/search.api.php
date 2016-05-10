@@ -65,3 +65,12 @@ searchWithThreeParameters($data, "one-bedroom", 1000, "Airport"); //search the d
 if (isset($connection)) {
     mysqli_close($connection);
 }
+
+
+
+
+
+
+
+
+
