@@ -36,14 +36,11 @@
                         <div style="margin-top: 10px;">
                             <div>
                                 <input type="text" name="apartName" ng-model="info.apartName"
-                                       placeholder="Apartment name" ng-required="true">
-                                <p class="validationError"
-                                   ng-show="formInfo.apartName.$invalid && formInfo.apartName.$touched">
-                                    Valid text required</p>
+                                       placeholder="Apartment name">
                                 <input type="number" name="leaseTerm" ng-model="info.leaseTerm"
                                        placeholder="Lease Term: 1 (for 1 month)" ng-required="true">
                                 <input type="text" name="location" ng-model="info.location"
-                                       placeholder="Location ">
+                                       placeholder="Location" ng-required="true">
                                 <button type="submit"><i class="fa fa-chevron-circle-right"></i></u></button>
                             </div>
                         </div>

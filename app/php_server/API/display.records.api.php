@@ -54,33 +54,6 @@ function display()
     }
 }
 
-//Update the information
-function updateInfo()
-{
-}
-
-function deleteById()
-{
-    
-}
-
-//Update this function to include adding info
-//to all the tables that are connected
-function addInfo($connection)
-{
-    //Adding info will include all the four tables.
-    //If an apartment info is added then location,
-    //room and price for specific (type of bedrooms single, studio etc)
-
-    $sql = "";
-    //Performing mysql query
-    $result = mysqli_query($connection, $sql);
-    if (!$result) {
-        die("Database query failed");
-    }
-
-}
-
 
 
 

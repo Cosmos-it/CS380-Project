@@ -30,9 +30,9 @@ apartmentSearch.config(['$stateProvider', '$urlRouterProvider',
                 controller: 'CrudController'
             })
 
-            .state('/sign-up', {
-                url: '/sign-up',
-                templateUrl: 'views/sign-up.html',
+            .state('/admin-dash', {
+                url: '/admin-dash',
+                templateUrl: 'views/admin-dash.html',
                 controller: 'CrudController'
             })
 
@@ -42,8 +42,8 @@ apartmentSearch.config(['$stateProvider', '$urlRouterProvider',
                 controller:'CrudController'
             })
 
-            .state('/admin-page', {
-                url: '/admin',
+            .state('/admin-register-login', {
+                url: '/sign-login',
                 templateUrl: 'views/authSignUp.html',
                 controller:'CrudController'
             })

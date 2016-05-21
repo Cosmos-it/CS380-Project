@@ -1,5 +1,5 @@
 <!--   -->
-<section id="authsign" class=" row large-8" ng-controller="CrudController">
+<section id="authsign" class=" row large-8">
 
     <div class="small-10 small-centered columns shadow" style="background-color: white;
     margin-top: 30px; margin-bottom: 50px;">
@@ -17,19 +17,19 @@
                       class=" userForm" name="adminForm" ng-submit="signUp()" novalidate>
                     <h5>Sign Up</h5>
                     <div class="registration medium-12 large-12 medium-centered ">
-                        <input type="text" name="lastname" ng-model="signUpInfo.apartName" placeholder="Apartment name"
+                        <input type="text" name="apartmentName" ng-model="apartmentName" placeholder="apartment name"
                                ng-required="true">
-                        <p class="validationError" ng-show="adminForm.apartName.$invalid && adminForm.apartName.$touched">
-                            {{lastNameERROR}}</p>
+                        <p class="validationError" ng-show="adminForm.apartmentName.$invalid && adminForm.apartmentName.$touched">
+                            {{apartmentNameError}}</p>
 
-                        <input type="email" name="email" ng-model="signUpInfo.email" placeholder="Email"
+                        <input type="email" name="apartmentEmail" ng-model="apartmentEmail" placeholder="email"
                                ng-required="true">
-                        <p class="validationError" ng-show="adminForm.email.$invalid && adminForm.email.$touched">
+                        <p class="validationError" ng-show="adminForm.apartmentEmail.$invalid && adminForm.apartmentEmail.$touched">
                             {{emailERROR}}</p>
 
-                        <input type="password" name="password" ng-model="signUpInfo.password" placeholder="Password"
+                        <input type="password" name="apartmentPassword" ng-model="apartmentPassword" placeholder="Password"
                                ng-required="true" maxlength="8">
-                        <p class="validationError" ng-show="adminForm.password.$invalid && adminForm.password.$touched">
+                        <p class="validationError" ng-show="adminForm.apartmentPassword.$invalid && adminForm.apartmentPassword.$touched">
                             {{passwordERROR}}</p>
 
                         <p class="help-text" id="passwordHelpText">Password must have 8 characters, a number and
@@ -45,14 +45,14 @@
                       name="loginForm" ng-submit="login()" novalidate>
                     <h5>Login</h5>
                     <div class="registration medium-12 large-12 medium-centered">
-                        <input type="email" name="email" ng-model="loginInfo.email" placeholder="Email"
+                        <input type="email" name="loginEmail" ng-model="loginEmail" placeholder="Email"
                                ng-required="true">
-                        <p class="validationError" ng-show="loginForm.email.$invalid && loginForm.email.$touched">
-                            {{emailError}}</p>
-                        <input type="password" name="password" ng-model="loginInfo.password" placeholder="Password"
+                        <p class="validationError" ng-show="loginForm.loginEmail.$invalid && loginForm.loginEmail.$touched">
+                            {{loginEmailError}}</p>
+                        <input type="password" name="loginPassword" ng-model="loginPassword" placeholder="Password"
                                ng-required="true">
-                        <p class="validationError" ng-show="loginForm.password.$invalid && loginForm.password.$touched">
-                            {{passwordError}}</p>
+                        <p class="validationError" ng-show="loginForm.loginPassword.$invalid && loginForm.loginPassword.$touched">
+                            {{loginPasswordError}}</p>
                         <button class="button small-12" name="button" type="submit" ng-disabled="loginForm.$invalid">
                             Login
                         </button>

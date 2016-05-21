@@ -2,21 +2,16 @@
  * Created by Taban on 5/5/16.
  */
 
-apartmentSearch.controller('CrudController', function ($scope, $http) {
-
-
-    /* Test */
-
+apartmentSearch.controller('CrudController', function ($scope, $http, $state) {
 
     /* Errors */
     var errors = {
-        nameError: "Can't be empty",
-        descriptionError: "Can't be empty",
-        leaseTermError: "1 - 12 months + ",
+        nameError: "Valid Apartment name",
+        descriptionError: "Fill it out",
+        leaseTermError: "Lease in months",
         locationError: "Enter valid address",
         emailError: "Valid Email required",
         passwordError: "Valid password required",
-        userName: "Valid user name required"
     };
 
 
@@ -24,9 +19,6 @@ apartmentSearch.controller('CrudController', function ($scope, $http) {
     // if ($scope.leaseTermError == undefined) $scope.leaseTermError = errors.leaseTermError;
 
     $scope.submitInfo = function () {
-        console.log($scope.info.apartName);
-
-
         /* Initialize check button to assign values*/
         var apartName = $scope.info.apartName;
         var leaseTerm = $scope.info.leaseTerm;
@@ -71,10 +63,11 @@ apartmentSearch.controller('CrudController', function ($scope, $http) {
         if (oneBedroomImage == undefined) oneBedroomImage = null;
         if (twoBedroomImage == undefined) twoBedroomImage = null;
         if (threeBedroomImage == undefined) threeBedroomImage = null;
-        if (location == undefined) location = null;//location
+        if (location == undefined) location = null;
 
-
+        //Grab data
         var data = {
+            createApartment: "create",
             apartName: apartName,
             leaseTerm: leaseTerm,
             pets: petsCheckBox,
@@ -94,7 +87,7 @@ apartmentSearch.controller('CrudController', function ($scope, $http) {
             threeBedroomImage: threeBedroomImage
         };
 
-
+        //Test
         console.log("Apt name: " + data.apartName + " LeaseTerm " + data.leaseTerm +
             " Pets: " + data.pets + " Location: " + data.location + " Description:" + data.description + " Studio: " + data.studioCheck +
             " Studio LeasePrice: " + data.studioLeasePrice + " One bedroom: " +
@@ -102,29 +95,71 @@ apartmentSearch.controller('CrudController', function ($scope, $http) {
             " Two bedRoom " + data.twoBedroomCheck + " Lease Price: " + data.twoBedroomLeasePrice +
             " Three bedroom: " + data.threeBedroomCheck + " LeasePrice: " + data.threeBedroomLeasePrice);
 
-        $http.post("../php_server/API/createApartment.api.php", data).success(function (response) {
+        $http.post("php_server/API/createApartment.api.php", data).success(function (response) {
             console.log("Test" + response);
             localStorage.setItem("token", JSON.stringify(response));
 
         }).error(function (error) {
-            //Catch errors here
+            //Catch server errors
 
         });
 
-    };
-    
-    $scope.signUp = function () {
-        //Test sign up here
-        
-        
-    };
-    
-    
-    $scope.login = function () {
-        //Test login here
-        
-    }
+    };//End of submit info function
 
+    /**************** Check for undefined fields and show errors *********************/
+    if ($scope.apartmentName == undefined) $scope.apartmentNameError = errors.nameError;
+    if ($scope.apartmentEmail == undefined) $scope.emailERROR = errors.emailError;
+    if ($scope.apartmentPassword == undefined) $scope.passwordERROR = errors.passwordError;
+
+    //sign up function
+    $scope.signUp = function () {
+        var data = {
+            register: "register",
+            name: $scope.apartmentName,
+            email: $scope.apartmentEmail,
+            password: $scope.apartmentPassword
+        };
+
+        //Test Apartment name, email, and password
+        console.log("Apartment: " + data.name + " |Email" + data.email + " |Password: " + data.password);
+
+        $http.post('php_server/API/createApartment.api.php', data).success(function (response) {
+            console.log("Test" + response);
+            localStorage.setItem("token", JSON.stringify(response));
+
+        }).error(function (error) {
+            //Catch server errors
+
+        });
+    };//End of sign up function
+
+
+    /****************** Check for undefined fields and show errors *********************/
+    if ($scope.loginEmail == undefined) $scope.loginEmailError = errors.emailError;
+    if ($scope.loginPassword == undefined) $scope.loginPasswordError = errors.passwordError;
+
+    //login function
+    $scope.login = function () {
+        var data = {
+            login:"login",
+            email: $scope.loginEmail,
+            password: $scope.loginPassword
+        }
+        //Test login here
+        console.log("Email: " + data.email + " |Password: " + data.password);
+
+        $http.post('php_server/API/createApartment.api.php', data).success(function (response) {
+            console.log("Test" + response);
+            localStorage.setItem("token", JSON.stringify(response));
+
+        }).error(function (error) {
+            //Catch server errors
+
+        });
+
+    };//End of login function
+
+    //Open detail info function
     function openDetailInfo() {
 
         $routeprovider.go("/details");
@@ -132,15 +167,15 @@ apartmentSearch.controller('CrudController', function ($scope, $http) {
 
         //Server API
 
-    }
+    }//End of function
 
+    //update data function
     function updateData() {
         //Push new updates to this users tables
 
         //Server API
 
-
-    }
+    }//End of function
 
     function deleteInfo() {
         //Perform delete on current data
@@ -152,7 +187,7 @@ apartmentSearch.controller('CrudController', function ($scope, $http) {
 
     function searchData() {
         //Get all the data from the base to perform display on the UI
-        $http.post("../php_server/API/DisplayData.api.php").success(function (response) {
+        $http.post("../php_server/API/display.record.api.php").success(function (response) {
 
             console.log("Apt name: " + response.apartName + " LeaseTerm " + response.leaseTerm +
                 " Pets: " + response.pets + " Studio: " + response.studioCheck +

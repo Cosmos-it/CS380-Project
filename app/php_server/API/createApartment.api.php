@@ -17,15 +17,15 @@ $database = LocalDatabase::getInstance();
 $connection = $database->getConnection();
 
 /************** Data from the front-end ******************/
-//$data = json_decode(file_get_contents("php://input"));
+$data = json_decode(file_get_contents("php://input"));
 
 
 /**
+ * Create Apartment details function
  * @param $connection
  * @throws Exception
  */
-
-function createApartment($connection)
+function createApartment($connection, $data)
 {
     /**
      * Example for retrieving data from the front-en
@@ -74,7 +74,6 @@ function createApartment($connection)
     $sql .= "'{$apartment->getPets()}', '{$apartment->getDescription()}')";
     $result = mysqli_query($connection, $sql);
     confirm_query($sql);
-
     $last_id = $connection->insert_id;
 
     $query = "INSERT INTO location(address, Apt_id)";
@@ -85,41 +84,52 @@ function createApartment($connection)
 
     echo "New record created successfully. Last inserted ID is: " . $last_id;
 
-
-//    $query .= "SELECT '{$apartment->getAddress()}', {$last_id}";
-//    mysqli_query($connection, $query);
-
-//    echo $last_id;
-    /*
-        if ($result === TRUE) {
-            $last_id = $connection->insert_id;
-            echo "New record created successfully. Last inserted ID is: " . $last_id;
-        } else {
-            echo "Error: " . $sql . "<br>" . $connection->error;
-        }*/
-
-
-//
-//INSERT INTO Studio(available, price, image, apt_id) 
-//	SELECT "false", 0.00, "image/thegrove/jpg", @max;
-//
-//INSERT INTO OneBedroom(available, price, image, apt_id) 
-//	SELECT "true", 540.00, "image/thegrove/jpg", @max;
-//
-//INSERT INTO TwoBedroom(available, price, image, apt_id) 
-//	SELECT "true", 7200.00, "image/thegrove/jpg", @max;
-//
-//INSERT INTO ThreeBedroom(available, price, image, apt_id) 
-//	SELECT "false", 0.00, "image/thegrove/jpg", @max;
-
     $connection = null; //Closed connection
 
 }
 
 
-/************** Execute the function ******************/
+/* Sign up function */
+function signUp($data) {
+
+    global $connection;
+    $name = $data->name;
+    $email = $data->email;
+    $password = $data->password;
+    $sql = "INSERT INTO apartment (name, email, password)";
+    $sql .=" VALUES ( '{$name}', '{$email}', '{$password}')";
+    $result = mysqli_query($connection, $sql);
+    confirm_query($result);
+
+    $last_id = $connection->insert_id;
+
+    echo json_encode($last_id);
+
+    $connection = null;
+}
+
+/* Login function  */
+function loginAdmin($data)
+{
+    global $connection;
+    $email = $data->email;
+    $password = $data->email;
+    $sql = "SELECT email, password FROM apartment ";
+    $sql .= " WHERE email='{$email}' AND password='{$password}'";
+    $result = mysqli_guery($connection, $sql);
+    confirm_query($result);
+    $connection = null;//Close connection
+}
+
+
+/************** Call the functions ******************/
 try {
-    createApartment($connection);
+
+    if ($data->register == "register"){
+        signUp($data);
+    } elseif ($data->createApartment == "create") {
+        createApartment($connection, $data);
+    }
 
 } catch (Exception $e) {
     echo $e;
