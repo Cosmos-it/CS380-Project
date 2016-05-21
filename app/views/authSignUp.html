@@ -1,5 +1,5 @@
 <!--   -->
-<section id="authsign" class="main row" ng-controller="userAuthentication">
+<section id="authsign" class=" row large-8" ng-controller="CrudController">
 
     <div class="small-10 small-centered columns shadow" style="background-color: white;
     margin-top: 30px; margin-bottom: 50px;">
@@ -14,34 +14,27 @@
         <section class="row">
             <div class="column large-6">
                 <form style="border: 1px solid #D8D8D8; padding: 10px; margin-bottom: 10px; margin-top:10px;"
-                      class=" userForm" name="userForm" ng-submit="signUp()" novalidate>
+                      class=" userForm" name="adminForm" ng-submit="signUp()" novalidate>
                     <h5>Sign Up</h5>
                     <div class="registration medium-12 large-12 medium-centered ">
-                        <input type="text" name="firstname" ng-model="signUpInfo.firstname" placeholder="First name"
+                        <input type="text" name="lastname" ng-model="signUpInfo.apartName" placeholder="Apartment name"
                                ng-required="true">
-                        <p class="validationError" ng-show="userForm.firstname.$invalid && userForm.firstname.$touched">
-                            {{firstNameERROR}}</p>
-
-                        <input type="text" name="lastname" ng-model="signUpInfo.lastname" placeholder="Last name"
-                               ng-required="true">
-                        <p class="validationError" ng-show="userForm.lastname.$invalid && userForm.lastname.$touched">
+                        <p class="validationError" ng-show="adminForm.apartName.$invalid && adminForm.apartName.$touched">
                             {{lastNameERROR}}</p>
 
                         <input type="email" name="email" ng-model="signUpInfo.email" placeholder="Email"
                                ng-required="true">
-                        <p class="validationError" ng-show="userForm.email.$invalid && userForm.email.$touched">Valid
+                        <p class="validationError" ng-show="adminForm.email.$invalid && adminForm.email.$touched">
                             {{emailERROR}}</p>
 
                         <input type="password" name="password" ng-model="signUpInfo.password" placeholder="Password"
                                ng-required="true" maxlength="8">
-                        <p class="validationError" ng-show="userForm.password.$invalid && userForm.password.$touched">
+                        <p class="validationError" ng-show="adminForm.password.$invalid && adminForm.password.$touched">
                             {{passwordERROR}}</p>
 
                         <p class="help-text" id="passwordHelpText">Password must have 8 characters, a number and
                             uppercase letter.</p>
-                        Check box if room owner : <input type="checkbox" name="roomStatus"
-                                                         ng-model="signUpInfo.roomStatus">
-                        <button class="button small-12" type="submit" ng-disabled="userForm.$invalid">Sign up</button>
+                        <button class="button small-12" type="submit" ng-disabled="adminForm.$invalid">Sign up</button>
                     </div>
                 </form> <!-- END OF FORM -->
             </div> <!-- END OF SIGN UP -->

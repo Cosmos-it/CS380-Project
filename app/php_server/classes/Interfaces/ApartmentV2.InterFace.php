@@ -8,18 +8,6 @@
  */
 interface ApartmentV2_InterFace
 {
-    public function setUsername($username);
-
-    public function getUsername();
-
-    public function setNumBedrooms($numBedrooms);
-
-    public function getNumBedrooms();
-
-//    public function setImage($image);
-//
-//    public function getImage();
-
     public function setPrice($price);
 
     public function getPrice();
@@ -32,9 +20,9 @@ interface ApartmentV2_InterFace
 
     public function getAptName();
 
-    public function setLocation($location);
+    public function setAddress($location);
 
-    public function getLocation();
+    public function getAddress();
 
     public function setPets($pets);
 

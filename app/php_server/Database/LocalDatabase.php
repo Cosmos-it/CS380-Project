@@ -23,9 +23,9 @@ class LocalDatabase
     private function __construct()
     {
         $this->DB_SERVER = "localhost";
-        $this->DB_USER = "roomly_space";
-        $this->DB_PASS = "roomly_space";
-        $this->DB_NAME = "roomly_space";
+        $this->DB_USER = "root";
+        $this->DB_PASS = "root";
+        $this->DB_NAME = "apartmentDB";
 
         $this->_connection = new mysqli($this->DB_SERVER,
             $this->DB_USER,

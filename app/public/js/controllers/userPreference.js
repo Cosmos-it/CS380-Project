@@ -6,9 +6,7 @@
  */
 
 
-
-
-roomly.controller('crudUserController', function ($scope, $http, $state) {
+apartmentSearch.controller('crudUserController', function ($scope, $http, $state) {
 
     $scope.info = {
         price: undefined,
@@ -31,8 +29,13 @@ roomly.controller('crudUserController', function ($scope, $http, $state) {
             image: $scope.info.image
         };
 
+        console.log($scope.name);
+
+        console.log("tEST")
         $http.post("../php_server/API/Preference.api.php", data)
             .success(function (response) {
+
+                console.log(data);
 
 
             })

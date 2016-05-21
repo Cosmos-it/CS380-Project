@@ -31,6 +31,7 @@ CREATE TABLE location (
 
 
 
+
 #-------Create room types table
 
 CREATE TABLE rooms (

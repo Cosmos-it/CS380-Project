@@ -2,18 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff45aa46-b582-446a-9e95-f73448ae0320" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/API/SQL_Script/apartment_queries.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/API/apartmentV2.api.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/classes/ApartmentV2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/classes/Interfaces/ApartmentV2.InterFace.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/index1.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/API/createApartment.api.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/API/login.api.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/API/sign-up.api.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/API/test_algorithm.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/API/upload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/classes/Admin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/classes/Interfaces/RoomTypeInterFace.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/classes/OneBedroom.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/classes/Studio.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/classes/ThreeBedroom.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/php_server/classes/TwoBedroom.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/edit-data.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/sign-up.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/editApartment.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/php_server/API/apartmentV2.api.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/php_server/API/userRegistration.api.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/auth-signup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/display-user.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/display.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/upload-data.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/display-data.html" afterPath="$PROJECT_DIR$/app/views/authSignUp.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/user-profile.html" afterPath="$PROJECT_DIR$/app/views/apartment-profile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/php_server/API/SQL_Script/QUERYIES.sql" afterPath="$PROJECT_DIR$/app/php_server/API/SQL_Script/QUERYIES.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/php_server/API/SQL_Script/apartment_queries.sql" afterPath="$PROJECT_DIR$/app/php_server/API/SQL_Script/apartment_queries.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/php_server/API/display.records.api.php" afterPath="$PROJECT_DIR$/app/php_server/API/display.records.api.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/php_server/API/search.api.php" afterPath="$PROJECT_DIR$/app/php_server/API/search.api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/php_server/Database/LocalDatabase.php" afterPath="$PROJECT_DIR$/app/php_server/Database/LocalDatabase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/php_server/Functions/included_functions.php" afterPath="$PROJECT_DIR$/app/php_server/Functions/included_functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/php_server/classes/Apartment.php" afterPath="$PROJECT_DIR$/app/php_server/classes/Apartment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/php_server/classes/ApartmentV2.php" afterPath="$PROJECT_DIR$/app/php_server/classes/ApartmentV2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/php_server/classes/Interfaces/ApartmentV2.InterFace.php" afterPath="$PROJECT_DIR$/app/php_server/classes/Interfaces/ApartmentV2.InterFace.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/css/css/custom.css" afterPath="$PROJECT_DIR$/app/public/css/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/display-data.html" afterPath="$PROJECT_DIR$/app/views/display-data.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/js/app.js" afterPath="$PROJECT_DIR$/app/public/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/js/controllers/crudUserController.js" afterPath="$PROJECT_DIR$/app/public/js/controllers/crudUserController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/js/controllers/userPreference.js" afterPath="$PROJECT_DIR$/app/public/js/controllers/userPreference.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/nav.html" afterPath="$PROJECT_DIR$/app/views/nav.html" />
     </list>
     <ignored path="cs380-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,6 +58,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/cs380-project$Test__1_.coverage" NAME="Test (1) Coverage Results" MODIFIED="1463034719542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/cs380-project$Test_testOne.coverage" NAME="Test.testOne Coverage Results" MODIFIED="1463034722969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -51,6 +87,20 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - apartmentDB@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="apartment" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -58,132 +108,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="display-data.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/display-data.html">
+      <file leaf-file-name="createApartment.api.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/php_server/API/createApartment.api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c7fc76d1-7983-4582-87a2-6fe8aa31591a/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="11" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="apartmentDB.price" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.price">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="apartmentDB.rooms" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.rooms">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="roomly_space.apartmentDetails" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/831fa1c1/0bdddeae-66b6-4635-b939-fa7cb2fc6472/roomly_space.apartmentDetails">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="roomly_space.messages" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/831fa1c1/0bdddeae-66b6-4635-b939-fa7cb2fc6472/roomly_space.messages">
-          <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QUERYIES.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/php_server/API/SQL_Script/QUERYIES.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1157">
-              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="apartment_queries.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/php_server/API/SQL_Script/apartment_queries.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="apartmentDB.apartmentInfo" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.apartmentInfo">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="apartmentDB.location" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-          <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="336">
+              <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+              <folding>
+                <marker date="1463702181000" expanded="true" signature="2142:2199" placeholder="INSERT INTO apartment... " />
+                <marker date="1463702181000" expanded="true" signature="2142:2236" placeholder="INSERT INTO apartment... " />
+                <marker date="1463702181000" expanded="true" signature="2491:2528" placeholder="INSERT INTO location... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -194,6 +128,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -203,43 +138,101 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/php_server/Auto-Load.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0bdddeae-66b6-4635-b939-fa7cb2fc6472/console.sql" />
+        <option value="$PROJECT_DIR$/app/php_server/API/SQL_Script/apartment_queries.sql" />
+        <option value="$PROJECT_DIR$/app/views/nav.html" />
+        <option value="$PROJECT_DIR$/app/php_server/API/userRegistration.api.php" />
+        <option value="/private/var/folders/jw/652s5n6x4h1b_39815hchvw80000gn/T/ide-phpunit.php" />
+        <option value="$PROJECT_DIR$/app/public/js/controllers/userPreference.js" />
+        <option value="$PROJECT_DIR$/app/php_server/API/upload.php" />
+        <option value="$PROJECT_DIR$/app/php_server/Database/LocalDatabase.php" />
+        <option value="dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.studio" />
+        <option value="dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.oneBedroom" />
+        <option value="dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.images" />
+        <option value="dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.twoBedRoom" />
+        <option value="dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.threeBedroom" />
+        <option value="dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.twoBedroom" />
+        <option value="dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.TwoBedroom" />
+        <option value="$PROJECT_DIR$/app/php_server/classes/Interfaces/RoomTypeInterFace.php" />
+        <option value="$PROJECT_DIR$/app/editApartment.html" />
+        <option value="$PROJECT_DIR$/app/views/detail-data.html" />
+        <option value="/HTML Fragment (sign-up.html:659).html" />
+        <option value="/HTML Fragment (sign-up.html:617).html" />
+        <option value="$PROJECT_DIR$/app/views/display-data.html" />
+        <option value="$PROJECT_DIR$/app/views/edit-data.html" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/php_server/API/apartmentV2.api.php" />
+        <option value="$PROJECT_DIR$/app/public/css/css/custom.css" />
+        <option value="$PROJECT_DIR$/app/views/sign-up.html" />
+        <option value="$PROJECT_DIR$/app/views/apartment-profile.html" />
         <option value="$PROJECT_DIR$/app/php_server/Functions/included_functions.php" />
         <option value="$PROJECT_DIR$/app/php_server/API/display.records.api.php" />
-        <option value="$PROJECT_DIR$/app/views/display.html" />
-        <option value="$PROJECT_DIR$/app/public/js/controllers/crudUserController.js" />
-        <option value="$PROJECT_DIR$/app/public/js/app.js" />
-        <option value="$PROJECT_DIR$/app/php_server/classes/Interfaces/ApartmentV2.InterFace.php" />
-        <option value="$PROJECT_DIR$/app/php_server/classes/ApartmentV2.php" />
-        <option value="$PROJECT_DIR$/app/php_server/API/apartmentV2.api.php" />
-        <option value="$PROJECT_DIR$/app/index1.html" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/views/display-data.html" />
-        <option value="$PROJECT_DIR$/app/public/css/css/custom.css" />
         <option value="$PROJECT_DIR$/app/php_server/API/search.api.php" />
+        <option value="$PROJECT_DIR$/app/php_server/classes/RoomType.php" />
+        <option value="$PROJECT_DIR$/app/php_server/classes/Studio.php" />
+        <option value="$PROJECT_DIR$/app/php_server/classes/Apartment.php" />
+        <option value="$PROJECT_DIR$/app/php_server/classes/OneBedroom.php" />
         <option value="dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location" />
-        <option value="dbtable:/831fa1c1/0bdddeae-66b6-4635-b939-fa7cb2fc6472/roomly_space.messages" />
-        <option value="dbtable:/831fa1c1/0bdddeae-66b6-4635-b939-fa7cb2fc6472/roomly_space.product_order" />
-        <option value="dbtable:/831fa1c1/0bdddeae-66b6-4635-b939-fa7cb2fc6472/roomly_space.apartmentDetails" />
+        <option value="dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.Studio" />
+        <option value="$PROJECT_DIR$/app/php_server/API/ApartmentCreate.API.php" />
+        <option value="$PROJECT_DIR$/app/php_server/classes/Interfaces/ApartmentV2.InterFace.php" />
+        <option value="$PROJECT_DIR$/app/php_server/API/createApartment.api.php" />
+        <option value="$PROJECT_DIR$/app/public/js/app.js" />
+        <option value="$PROJECT_DIR$/app/public/js/controllers/crudUserController.js" />
+        <option value="$PROJECT_DIR$/app/php_server/classes/Admin.php" />
+        <option value="$PROJECT_DIR$/app/php_server/classes/ApartmentV2.php" />
+        <option value="$PROJECT_DIR$/app/php_server/classes/ThreeBedroom.php" />
+        <option value="$PROJECT_DIR$/app/php_server/classes/TwoBedroom.php" />
+        <option value="$PROJECT_DIR$/app/php_server/Test.php" />
+        <option value="$PROJECT_DIR$/app/php_server/API/login.api.php" />
+        <option value="$PROJECT_DIR$/app/php_server/API/test_algorithm.php" />
+        <option value="$PROJECT_DIR$/app/php_server/API/sign-up.api.php" />
+        <option value="dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.apartment" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c7fc76d1-7983-4582-87a2-6fe8aa31591a/console.sql" />
-        <option value="$PROJECT_DIR$/app/php_server/API/SQL_Script/QUERYIES.sql" />
-        <option value="$PROJECT_DIR$/app/php_server/API/SQL_Script/apartment_queries.sql" />
+        <option value="$PROJECT_DIR$/app/views/authSignUp.html" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
-  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpServers">
-    <servers />
+    <servers>
+      <server id="de83a4a2-233c-4cf2-913c-74c84c62733c" name="Unnamed" />
+    </servers>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.5" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP">
+    <include_path>
+      <path value="" />
+    </include_path>
+  </component>
   <component name="ProjectFrameBounds">
     <option name="width" value="1440" />
     <option name="height" value="900" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>GeneralPHP</id>
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PhpHierarchyChecksInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -266,7 +259,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -353,7 +345,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -375,33 +367,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cs380-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cs380-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -420,6 +390,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="php_server" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs380-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs380-project" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php_server" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs380-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs380-project" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php_server" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -442,58 +456,57 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="API" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cs380-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cs380-project" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php_server" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="API" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SQL_Script" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RoomlyWebsite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="(id(&#9;null&#9;null" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/app/views/detail-data.html" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/php_server/API" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/php_server/API/SQL_Script" />
       <recent name="$PROJECT_DIR$/app/php_server/classes/Interfaces" />
       <recent name="$PROJECT_DIR$/app/php_server/classes" />
       <recent name="$PROJECT_DIR$/app/php_server/API" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.Test">
+    <configuration default="false" name="Test" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Test" file="$PROJECT_DIR$/app/php_server/Test.php" method="testOne" scope="Class" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test.testOne" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Test" file="$PROJECT_DIR$/app/php_server/Test.php" method="testOne" scope="Method" />
+      <method />
+    </configuration>
+    <configuration default="false" name="display.records.api.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cs380-project/app/php_server/API/display.records.api.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="included_functions.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/app/php_server/Functions/included_functions.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="Test.testOneApartment" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Test" file="$PROJECT_DIR$/app/php_server/Test.php" method="testOneApartment" scope="Method" />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
@@ -506,6 +519,9 @@
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -524,12 +540,33 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="false" name="createApartment.api.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/app/php_server/API/createApartment.api.php">
+      <method />
+    </configuration>
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.createApartment.api.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHPUnit.Unnamed" />
+      <item index="2" class="java.lang.String" itemvalue="PHPUnit.Test" />
+      <item index="3" class="java.lang.String" itemvalue="PHPUnit.Test.testOne" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.display.records.api.php" />
+      <item index="5" class="java.lang.String" itemvalue="PHP Script.included_functions.php" />
+      <item index="6" class="java.lang.String" itemvalue="PHPUnit.Test.testOneApartment" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="PHPUnit.Test" />
+        <item index="1" class="java.lang.String" itemvalue="PHPUnit.Test.testOneApartment" />
+        <item index="2" class="java.lang.String" itemvalue="PHPUnit.Test.testOne" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.display.records.api.php" />
+        <item index="4" class="java.lang.String" itemvalue="PHP Script.included_functions.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -543,36 +580,100 @@
       <workItem from="1461975977246" duration="2860000" />
       <workItem from="1462201746086" duration="8514000" />
       <workItem from="1462457021456" duration="14976000" />
-      <workItem from="1462767657202" duration="11250000" />
+      <workItem from="1462767657202" duration="12465000" />
+      <workItem from="1462892890012" duration="3014000" />
+      <workItem from="1462929230097" duration="15824000" />
+      <workItem from="1463256025989" duration="141000" />
+      <workItem from="1463260447161" duration="12000" />
+      <workItem from="1463260475639" duration="33331000" />
+      <workItem from="1463545821032" duration="905000" />
+      <workItem from="1463547195000" duration="26097000" />
+      <workItem from="1463666567446" duration="21276000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Test - 2016.05.19 at 11h 34m 21s.xml">
+      <configuration name="Test" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Test - 2016.05.19 at 11h 35m 07s.xml">
+      <configuration name="Test" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Test - 2016.05.19 at 11h 35m 17s.xml">
+      <configuration name="Test" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Test - 2016.05.19 at 11h 35m 25s.xml">
+      <configuration name="Test" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Test - 2016.05.19 at 11h 36m 50s.xml">
+      <configuration name="Test" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Test - 2016.05.19 at 12h 23m 44s.xml">
+      <configuration name="Test" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Test - 2016.05.19 at 16h 06m 24s.xml">
+      <configuration name="Test" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Test - 2016.05.19 at 16h 06m 48s.xml">
+      <configuration name="Test" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Test - 2016.05.19 at 16h 40m 27s.xml">
+      <configuration name="Test" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Test - 2016.05.20 at 17h 40m 20s.xml">
+      <configuration name="Test" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45974000" />
+    <option name="totallyTimeSpent" value="147789000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20277777" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39507622" sideWeight="0.50555557" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16319445" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976552" sideWeight="0.5048611" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976552" sideWeight="0.49513888" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.49526066" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30715123" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4056272" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4196952" sideWeight="0.4893365" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19861111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2888889" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282532" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42771083" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987952" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4841735" sideWeight="0.49444443" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.50473934" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.49526066" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30722892" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4060241" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42048192" sideWeight="0.4893365" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28540772" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27896994" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987952" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -586,171 +687,463 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="8" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/public/js/controllers/crudUserController.js">
+    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
+      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/js/controllers/userPreference.js">
+    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
+      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/display.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="52" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
+      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/php_server/classes/ApartmentV2.php">
+    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
+      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/php_server/classes/Interfaces/ApartmentV2.InterFace.php">
+    <entry file="file://$PROJECT_DIR$/app/views/upload-data.html" />
+    <entry file="file://$PROJECT_DIR$/app/views/display.html" />
+    <entry file="file://$PROJECT_DIR$/app/editApartment.html" />
+    <entry file="file://$PROJECT_DIR$/app/views/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/css/css/sign-register.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/css/css/nav-styling.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/css/css/messages-css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/css/css/inbox-css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/css/css/foundation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/css/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+        <state relative-caret-position="574">
+          <caret line="41" column="29" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/public/css/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="293" column="0" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
+        <state relative-caret-position="4200">
+          <caret line="300" column="10" selection-start-line="300" selection-start-column="1" selection-end-line="300" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/php_server/API/display.records.api.php">
+    <entry file="file://$PROJECT_DIR$/app/views/edit-data.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        <state relative-caret-position="658">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/c7fc76d1-7983-4582-87a2-6fe8aa31591a">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>c7fc76d1-7983-4582-87a2-6fe8aa31591a</OriginalElement>
+          <nodes>
+            <node x="403.0" y="279.0">c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.location</node>
+            <node x="203.0" y="259.0">c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.TwoBedroom</node>
+            <node x="758.0" y="259.0">c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.ThreeBedroom</node>
+            <node x="558.0" y="259.0">c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.Studio</node>
+            <node x="3.0" y="259.0">c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.OneBedroom</node>
+            <node x="371.0" y="-43.0">c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.apartment</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.OneBedroom" target="c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.apartment">
+              <point x="0.0" y="-64.0" />
+              <point x="90.0" y="148.0" />
+              <point x="388.7" y="148.0" />
+              <point x="-78.80000000000001" y="64.0" />
+            </edge>
+            <edge source="c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.ThreeBedroom" target="c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.apartment">
+              <point x="0.0" y="-64.0" />
+              <point x="845.0" y="148.0" />
+              <point x="546.3000000000001" y="148.0" />
+              <point x="78.80000000000007" y="64.0" />
+            </edge>
+            <edge source="c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.TwoBedroom" target="c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.apartment">
+              <point x="0.0" y="-64.0" />
+              <point x="290.0" y="158.0" />
+              <point x="428.1" y="158.0" />
+              <point x="-39.39999999999998" y="64.0" />
+            </edge>
+            <edge source="c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.location" target="c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.apartment">
+              <point x="0.0" y="-44.0" />
+              <point x="0.0" y="64.0" />
+            </edge>
+            <edge source="c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.Studio" target="c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.apartment">
+              <point x="0.0" y="-64.0" />
+              <point x="645.0" y="158.0" />
+              <point x="506.90000000000003" y="158.0" />
+              <point x="39.400000000000034" y="64.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="204.0" y="178.0" />
+          <SelectedNodes>
+            <node>c7fc76d1-7983-4582-87a2-6fe8aa31591a.TABLE:apartmentDB.apartment</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/apartment-profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="72" column="27" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
           <folding>
-            <marker date="1462224894000" expanded="true" signature="1499:1516" placeholder="insert into apt_table... " />
-            <marker date="1462224894000" expanded="true" signature="1499:1567" placeholder="insert into apt_table... " />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#0;n#section#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.Studio">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.ThreeBedroom">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.TwoBedroom">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/classes/Apartment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/classes/Interfaces/ApartmentV2.InterFace.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/php_server/Functions/included_functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
+        <state relative-caret-position="509">
+          <caret line="85" column="337" selection-start-line="85" selection-start-column="337" selection-end-line="98" selection-end-column="23" />
           <folding>
-            <marker date="1462224514000" expanded="true" signature="1521:1544" placeholder="SELECT * FRO... apt_table" />
+            <marker date="1463672406000" expanded="true" signature="1523:1558" placeholder="SELECT * FRO... apartment" />
+            <marker date="1463672406000" expanded="true" signature="1574:1897" placeholder="SELECT * FRO... apartment" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/php_server/API/apartmentV2.api.php">
+    <entry file="file://$PROJECT_DIR$/app/php_server/classes/Messaging.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="306" column="1" selection-start-line="306" selection-start-column="1" selection-end-line="306" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/classes/Interfaces/Apartment.InterFace.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/classes/Interfaces/RoomTypeInterFace.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/auth-signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="42" column="72" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sign-up.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/js/controllers/crudUserController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="122" column="32" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/classes/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+          <folding>
+            <element signature="n#__construct#0;n#Admin#0;n#!!top" expanded="true" />
+            <element signature="n#createAdmin#0;n#Admin#0;n#!!top" expanded="true" />
+            <element signature="n#setId#0;n#Admin#0;n#!!top" expanded="true" />
+            <element signature="n#setPassword#0;n#Admin#0;n#!!top" expanded="true" />
+            <element signature="n#setUsername#0;n#Admin#0;n#!!top" expanded="true" />
+            <element signature="n#getId#0;n#Admin#0;n#!!top" expanded="true" />
+            <element signature="n#getPassword#0;n#Admin#0;n#!!top" expanded="true" />
+            <element signature="n#getUsername#0;n#Admin#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/classes/ApartmentV2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="204" column="4" selection-start-line="204" selection-start-column="4" selection-end-line="204" selection-end-column="4" />
+          <folding>
+            <element signature="n#__construct#0;n#ApartmentV2#0;n#!!top" expanded="true" />
+            <element signature="e#1918#2246#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/classes/TwoBedroom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/classes/Studio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="84" column="31" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/classes/OneBedroom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/classes/ThreeBedroom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+          <folding>
+            <element signature="e#289#329#0#PHP" expanded="false" />
+            <element signature="e#472#504#0#PHP" expanded="false" />
+            <element signature="e#630#940#0#PHP" expanded="false" />
+            <element signature="e#666#847#0#PHP" expanded="false" />
+            <element signature="e#744#847#0#PHP" expanded="false" />
+            <element signature="e#858#940#0#PHP" expanded="false" />
+            <element signature="e#952#984#0#PHP" expanded="false" />
+            <element signature="e#1062#1147#0#PHP" expanded="false" />
+            <element signature="n#setImage#0;n#ThreeBedroom#0;n#!!top" expanded="true" />
+            <element signature="e#1233#1306#0#PHP" expanded="false" />
+            <element signature="e#1447#1669#0#PHP" expanded="false" />
+            <element signature="e#1487#1574#0#PHP" expanded="false" />
+            <element signature="e#1585#1669#0#PHP" expanded="false" />
+            <element signature="e#1739#1846#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/Test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
+          <folding>
+            <element signature="n#testAdmin#0;n#Test#0;n#!!top" expanded="true" />
+            <element signature="n#testStudioTest#0;n#Test#0;n#!!top" expanded="true" />
+            <element signature="n#testOneBedroom#0;n#Test#0;n#!!top" expanded="true" />
+            <element signature="n#testTwoBedroom#0;n#Test#0;n#!!top" expanded="true" />
+            <element signature="n#testThreeBedroom#0;n#Test#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/API/test_algorithm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/API/userRegistration.api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-89">
+          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/API/login.api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/php_server/API/search.api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        <state relative-caret-position="336">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/php_server/API/upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+        <state relative-caret-position="322">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -768,340 +1161,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/0bdddeae-66b6-4635-b939-fa7cb2fc6472/roomly_space.product_order">
-      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/0bdddeae-66b6-4635-b939-fa7cb2fc6472/roomly_space.messages">
-      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/display-data.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.apartmentInfo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/0bdddeae-66b6-4635-b939-fa7cb2fc6472/roomly_space.apartmentDetails">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.apartmentInfo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.apartmentInfo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.apartmentInfo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.apartmentInfo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.location">
-      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.rooms">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.price">
+    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.OneBedroom">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1116,25 +1176,64 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c7fc76d1-7983-4582-87a2-6fe8aa31591a/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="11" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="2" />
+        <state relative-caret-position="280">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/php_server/API/SQL_Script/QUERYIES.sql">
+    <entry file="file://$PROJECT_DIR$/app/views/authSignUp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1157">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        <state relative-caret-position="840">
+          <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#1;n#section#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/831fa1c1/c7fc76d1-7983-4582-87a2-6fe8aa31591a/apartmentDB.apartment">
+      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/php_server/API/SQL_Script/apartment_queries.sql">
+    <entry file="file://$PROJECT_DIR$/app/php_server/API/sign-up.api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding />
+        <state relative-caret-position="378">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/API/display.records.api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+          <folding>
+            <element signature="n#display#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/php_server/API/createApartment.api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding>
+            <marker date="1463702181000" expanded="true" signature="2142:2199" placeholder="INSERT INTO apartment... " />
+            <marker date="1463702181000" expanded="true" signature="2142:2236" placeholder="INSERT INTO apartment... " />
+            <marker date="1463702181000" expanded="true" signature="2491:2528" placeholder="INSERT INTO location... " />
+          </folding>
         </state>
       </provider>
     </entry>

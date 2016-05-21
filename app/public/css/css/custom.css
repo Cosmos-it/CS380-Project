@@ -1,7 +1,5 @@
 /*        Orbit style sheet */
-
 @import url("//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900");
-
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -11,12 +9,18 @@
 html body {
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
-    /*background-color: #F8F8F8;*/
+    background-color: #F8F8F8;
 }
 
-
 body {
-    color: #1a1a1a;;
+    color: #1a1a1a;
+
+}
+
+.btns {
+    width: 50px;
+    height: 20px;
+
 }
 
 .top-bar .menu {
@@ -27,7 +31,6 @@ body {
 .top-bar {
     background-color: white;
     border-bottom: 1px solid #E0E0E0;
-
 
 }
 
@@ -40,14 +43,13 @@ body {
 }
 
 /*.top-bar .top-bar-right ul li a {*/
-    /*color: #1a1a1a;*/
-    /*font-weight: 600;*/
+/*color: #1a1a1a;*/
+/*font-weight: 600;*/
 /*}*/
 
 /*.top-bar .top-bar-right ul li a:hover {*/
-    /*color: #2b81af;*/
+/*color: #2b81af;*/
 /*}*/
-
 
 /*.user:hover {*/
 /*background-color: #8699a4;*/
@@ -100,7 +102,7 @@ body {
 }
 
 /*.search {*/
-    /*background-color: white;*/
+/*background-color: white;*/
 /*}*/
 
 .featured {
@@ -176,7 +178,17 @@ textArea {
 }
 
 .main {
+    margin-top: 20px;
+    margin-bottom: 50px;
     padding: 10px;
+    background-color: white;
+    -webkit-box-shadow: 0 0 0.1px 0px #444444;
+    -moz-box-shadow: 0 0 0.1px 0px #444444;
+    box-shadow: 0 0 0.1px 0px #444444;
+}
+
+.main1 {
+    padding: 20px;
 
 }
 
@@ -243,11 +255,11 @@ input[type="search"] {
 }
 
 .shadow {
-    border: 1px solid #D8D8D8 ;
+    border: 1px solid #D8D8D8;
     /*-webkit-box-shadow: 0 0 0.1px 0px #444444;*/
     /*-moz-box-shadow: 0 0 0.1px 0px #444444;*/
     /*box-shadow: 0 0 0.1px 0px #444444;*/
-    border-radius: 4px;
+    border-radius: 2px;
 
 }
 
@@ -270,13 +282,23 @@ input[type="search"] {
 /*}*/
 
 /*a:hover {*/
-    /*color: #2199e8;*/
+/*color: #2199e8;*/
 /*}*/
-
 
 /*   Featured card material styles */
 
 .card {
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    color: #272727;
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    border: 1px solid lightgrey;
+
+}
+
+.copy-card {
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
     color: #272727;
@@ -342,11 +364,26 @@ input[type="search"] {
     border-radius: 2px 2px 0 0;
 }
 
-
 /* Select styling */
 
-.select1, .select2, .select3{
+.select1, .select2, .select3 {
     display: inline-table;
     width: 250px;
 
+}
+
+.title h4 {
+    background-color: red;
+    opacity: 0.4;
+    color: whitesmoke;
+    padding: 5px;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+.title {
+}
+
+img {
+    width: 100%;
 }

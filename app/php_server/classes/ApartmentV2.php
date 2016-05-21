@@ -1,6 +1,12 @@
 <?php
 
 require("Interfaces/ApartmentV2.InterFace.php");
+require("Admin.php");
+require("Studio.php");
+require("OneBedroom.php");
+require("TwoBedroom.php");
+require("ThreeBedroom.php");
+
 
 /**
  * Created by PhpStorm.
@@ -11,22 +17,32 @@ require("Interfaces/ApartmentV2.InterFace.php");
 class ApartmentV2 implements ApartmentV2_InterFace
 
 {
-    private $username;
+    private static $instance;
+    private $studio;
+    private $admin;
+    private $oneBedroom;
+    private $twoBedroom;
+    private $threeBedroom;
     private $numBedrooms;
     private $apt_name;
     private $location;
     private $price;
     private $leaseTerm;
     private $pets;
+    private $description;
 
-//    private $image;
-
-    //private $file_tmp;
-
+    /**
+     * @return mixed
+     */
 
     public function __construct()
     {
-        $this->username = null;
+        $this->studio = Studio::createStudio();
+        $this->oneBedroom = OneBedroom::createOneBedroom();
+        $this->twoBedroom = TwoBedroom::createTwoBedroom();
+        $this->threeBedroom = ThreeBedroom::createThreeBedroom();
+        $this->admin = Admin::createAdmin();
+        $this->description = null;
         $this->numBedrooms = 0;
         $this->apt_name = null;
         $this->location = null;
@@ -36,30 +52,27 @@ class ApartmentV2 implements ApartmentV2_InterFace
 
     }
 
-    public function setUserName($username)
+    public function getDescription()
     {
-        if (!is_null($username)) {
-            if (strlen($username) <= 10) {
-                $this->username = $username;
+        return $this->description;
+    }
+    public function setDescription($description)
+    {
+        if (!is_null($description)) {
+            if (is_string($description)) {
+                $this->description = $description;
             } else {
-                throw new Exception("Username more ten characters: " . $username);
+                throw new Exception("Apartment name is not of type String: " . $description);
             }
         } else {
-            throw new Exception("Username field does not consist of anything");
-        }
+            throw new Exception("Apartment name is not found " . $description);
+        }    }
 
-    }
-
-    public function getUsername()
-    {
-        return $this->username;
-    }
-
+    //GetNumBedRooms to be removed later
     public function getNumBedrooms()
     {
         return $this->numBedrooms;
     }
-
     public function setNumBedrooms($numBedrooms)
     {
         if (!is_null($numBedrooms)) {
@@ -79,7 +92,6 @@ class ApartmentV2 implements ApartmentV2_InterFace
 
         return $this->price;
     }
-
     public function setPrice($price)
     {
 
@@ -88,31 +100,18 @@ class ApartmentV2 implements ApartmentV2_InterFace
             if (is_double($price)) {
                 $this->price = $price;
             } else {
-                throw new Exeption("Price is not set as type double: " . $price);
+                throw new Exception("Price is not set as type double: " . $price);
             }
         } else {
             throw new Exception("Price is not found: " . $price);
         }
     }
-//
-//    public function getImage()
-//    {
-//
-//        return $this->image;
-//    }
-
-    /**Check this implement later during image upload.
-     *================================================
-     * Image declaration is not used yet.
-     *
-     */
 
     public function getLeaseTerm()
     {
 
         return $this->leaseTerm;
     }
-
     public function setLeaseTerm($lease)
     {
 
@@ -133,7 +132,6 @@ class ApartmentV2 implements ApartmentV2_InterFace
 
         return $this->apt_name;
     }
-
     public function setAptName($apt_name)
     {
 
@@ -148,13 +146,12 @@ class ApartmentV2 implements ApartmentV2_InterFace
         }
     }
 
-    public function getLocation()
+    public function getAddress()
     {
 
         return $this->location;
     }
-
-    public function setLocation($location)
+    public function setAddress($location)
     {
 
         if (!is_null($location)) {
@@ -172,7 +169,6 @@ class ApartmentV2 implements ApartmentV2_InterFace
     {
         return $this->pets;
     }
-
     public function setPets($pets)
     {
         if (!is_null($pets)) {
@@ -184,6 +180,36 @@ class ApartmentV2 implements ApartmentV2_InterFace
         } else {
             throw new Exception("Pets is not found: " . $pets);
         }
+    }
+
+    public function getStudio()
+    {
+        return $this->studio;
+    }
+    public function getOneBedroom()
+    {
+        return $this->oneBedroom;
+    }
+    public function getTwoBedroom()
+    {
+        return $this->twoBedroom;
+    }
+    public function getThreeBedroom()
+    {
+        return $this->threeBedroom;
+    }
+    public function getAdmin()
+    {
+        return $this->admin;
+    }
+    
+    public static function CreateApartment()
+    {
+        if (!self::$instance) { // If no instance then make one
+            self::$instance = new self();
+        }
+        return self::$instance;
+
     }
 
 }

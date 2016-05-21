@@ -1,0 +1,65 @@
+<!-- Apartment edits -->
+<section class="main row large-8" ng-controller="CrudController">
+
+    <section class="column" style="padding: 5px;">
+        <div class="top-bar-left" style="margin-right: 20px;">
+            <ul class="menu">
+                <li>Apt Name here</li>
+                <!--  This data here changes ( USER CAN HAVE ROOM OR NOT HAVE A ROOM )-->
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu">
+                <li><a href="#inbox.html">Save</a> <!--- (ALLOWS USER TO SEND MESSAGE TO ANOTHER USER --->
+            </ul>
+        </div>
+    </section>
+
+    <hr>
+    <!--/Section inputs/-->
+    <section class="column " id="panel2">
+        <section class="large-3 columns">
+            <div>
+                <img class="thumbnail"
+                     src="public/img/users_profile_images/room-images/recortada-Puro-Hotel-Puro-Hotel-Palma-Doble-standar-350x350.jpg">
+            </div>
+
+            <div class="apartment-data">
+                <form class="preapartment-data">
+
+                    <input type="text" id="Apartment_name" ng-model="Apartment_name" placeholder="Apartment name">
+                    <input type="number" id="Number_of_Rooms" ng-model="Number_of_Rooms" placeholder="Number of Rooms">
+                    <input type="number" id="Number_of_Bathrooms" ng-model="Number_of_Bathrooms"
+                           placeholder="Number of Bathrooms">
+                    <input type="number" id="Lease_term" ng-model="Lease_term" placeholder="Lease term">
+                    <input type="number" id="Lease_price" ng-model="Lease_price" placeholder="Lease price">
+                    <input type="text" id="Location" ng-model="Location" placeholder="Location ">
+                    <button type="submit"><i class="fa fa-chevron-circle-right"></i></u></button>
+                </form>
+            </div>
+        </section>
+
+        <!--End section inputs-->
+
+        <!--Upload image-->
+        <section class="large-9 column">
+            <textarea type="text" id="Apartment Description" placeholder="Apartment Description"></textarea>
+
+
+            <form ng-click="uploadImage();">
+
+                <input type="file" name="upload_Pic" alt="image" src="" accept="image/*">
+
+                <button type="file" for="uploadRoomImage" class="button"> Upload File</button>
+                <input type="file" id="uploadRoomImage" class="show-for-sr">
+
+            </form>
+        </section>
+        <!--End of Upload image-->
+    </section>
+</section>
+
+<div class="columns privacy-style">
+    <a href="#">Privacy Policy</a> </p>
+</div>
+</section>

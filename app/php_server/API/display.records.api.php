@@ -33,33 +33,46 @@ $connection = $databaseInstance->getConnection();
 display();
 
 /* Method calling */
-function display() {
+function display()
+{
     $data = displayData();
+//    var_dump($data);
     foreach ($data as $item) {
-        echo "Apartment name: " . $item['name'] . " | Bed Room: " . $item['rooms'] .
-            " | Pets: " . $item['pets'] . " | Lease term: " . $item['lease'] .
-            " | Cost: " . $item['cost'] . " | Address " . $item['address'] . "<br>\n";
+        echo "Apartment name: " . $item['name'] . " | Lease Term: " . $item['leaseTerm'] .
+            " | Pets: " . $item['pets'] . " Location: " . $item['address'] . " | Description: " . $item['description'] . "<br>\n";
+
+        echo "Studio True/false: " . $item['available'] . " | Price: " . $item['price'] .
+            " | Image: " . $item['image'] . " | Description: " . "<br>\n";
+
+        echo "One bedroom True/false: " . $item['available'] . " | Price: " . $item['price'] .
+            " | Image: " . $item['image'] . " | Description: " . "<br>\n";
+
+        echo "Two bedroom True/false: " . $item['available'] . " | Price: " . $item['price'] .
+            " | Image: " . $item['image'] . " | Description: " . "<br>\n";
+        echo "Three bedroom True/false: " . $item['available'] . " | Price: " . $item['price'] .
+            " | Image: " . $item['image'] . " | Description: " . "<br>\n";
     }
 }
 
 //Update the information
-function updateInfo() { }
+function updateInfo()
+{
+}
 
-function deleteById() {}
+function deleteById()
+{
+    
+}
 
+//Update this function to include adding info
+//to all the tables that are connected
 function addInfo($connection)
 {
+    //Adding info will include all the four tables.
+    //If an apartment info is added then location,
+    //room and price for specific (type of bedrooms single, studio etc)
 
-    $name = "Fuck it Apartment";
-    $room = 1;
-    $cost = 200;
-    $lease = 9;
-    $pets = "yes";
-    $address = "12128 N Cosmos St.";
-    $sql = "INSERT INTO apt_table ( ";
-    $sql .= "name,rooms,cost,lease,pets,address";
-    $sql .= ") VALUES ('{$name}','{$room}','{$cost}','{$lease}','{$pets}','{$address}');";
-
+    $sql = "";
     //Performing mysql query
     $result = mysqli_query($connection, $sql);
     if (!$result) {

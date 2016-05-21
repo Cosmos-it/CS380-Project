@@ -81,7 +81,9 @@ function decode_message($stringText)
 function displayData()
 {
     global $connection;
-    $sql = 'SELECT * FROM apt_table';
+//    $sql = 'SELECT * FROM apartmentDB.apartment';
+
+    $sql = "SELECT * FROM apartment   INNER JOIN location ON apartment.Apt_id = location.Apt_id   INNER JOIN Studio ON apartment.Apt_id = Studio._id   INNER JOIN OneBedroom ON apartment.Apt_id = OneBedroom._id   INNER JOIN TwoBedroom ON apartment.Apt_id = TwoBedroom._id   INNER JOIN ThreeBedroom ON apartment.Apt_id = ThreeBedroom._id";
     //Performing mysql query
     $result = mysqli_query($connection, $sql);
     if (!$result) {

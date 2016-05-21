@@ -11,13 +11,11 @@ require("Interfaces/Apartment.InterFace.php");
 
 class Apartment implements Apartment_InterFace
 {
-
     private $apt_name;
     private $location;
     private $price;
     private $leaseTerm;
     private $image;
-
 
     public function __construct()
     {
