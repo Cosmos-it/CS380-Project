@@ -50,12 +50,12 @@ class Test extends PHPUnit_Framework_TestCase
     {
         $this->Admin = ApartmentV2::CreateApartment()->getAdmin();
         $this->Admin->setId(1);
-        $this->Admin->setUsername("Thegrove");
+        $this->Admin->setEmail("Thegrove");
         $this->Admin->setPassword("admin");
 
         //Tests
         $this->assertEquals(1, $this->Admin->getId());
-        $this->assertEquals("Thegrove", $this->Admin->getUsername());
+        $this->assertEquals("Thegrove", $this->Admin->getEmail());
         $this->assertEquals("admin", $this->Admin->getPassword());
 
 

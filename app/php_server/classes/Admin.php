@@ -9,21 +9,15 @@
 class Admin
 {
     private static $instance;
-    private $username;
+    private $email;
     private $password;
     private $_id;
-
-    /**
-     * Admin constructor.
-     * @param $_id
-     * @param $password
-     * @param $username
-     */
+    
     public function __construct()
     {
         $this->_id = 0;
         $this->password = "";
-        $this->username = "";
+        $this->email = "";
     }
 
     public static function createAdmin()
@@ -52,11 +46,11 @@ class Admin
     }
 
     /**
-     * @param mixed $username
+     * @param mixed $email
      */
-    public function setUsername($username)
+    public function setEmail($email)
     {
-        $this->username = $username;
+        $this->email = $email;
     }
 
     /**
@@ -78,9 +72,9 @@ class Admin
     /**
      * @return mixed
      */
-    public function getUsername()
+    public function getEmail()
     {
-        return $this->username;
+        return $this->email;
     }
 
     

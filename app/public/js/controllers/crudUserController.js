@@ -3,8 +3,7 @@
  */
 
 apartmentSearch.controller('CrudController', function ($scope, $http, $state) {
-
-    /* Errors */
+    /* errors array */
     var errors = {
         nameError: "Valid Apartment name",
         descriptionError: "Fill it out",
@@ -14,12 +13,11 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state) {
         passwordError: "Valid password required",
     };
 
-
     if ($scope.apartName == undefined) $scope.nameError = errors.nameError;
     // if ($scope.leaseTermError == undefined) $scope.leaseTermError = errors.leaseTermError;
 
     $scope.submitInfo = function () {
-        /* Initialize check button to assign values*/
+        /* assignment */
         var apartName = $scope.info.apartName;
         var leaseTerm = $scope.info.leaseTerm;
         var location = $scope.info.petsCheckBox;
@@ -68,32 +66,32 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state) {
         //Grab data
         var data = {
             createApartment: "create",
-            apartName: apartName,
-            leaseTerm: leaseTerm,
+            name: apartName,
+            lease: leaseTerm,
             pets: petsCheckBox,
-            location: location,
+            address: location,
             description: description,
-            studioCheck: studioCheck,
-            studioLeasePrice: studioLeasePrice,
+            studio: studioCheck,
+            studioPrice: studioLeasePrice,
             studioImage: studioImage,
-            oneBedroomCheck: oneBedroomCheck,
-            oneBedroomLeasePrice: oneBedroomLeasePrice,
+            oneBedroom: oneBedroomCheck,
+            oneBedroomPrice: oneBedroomLeasePrice,
             oneBedroomImage: oneBedroomImage,
-            twoBedroomCheck: twoBedroomCheck,
-            twoBedroomLeasePrice: twoBedroomLeasePrice,
+            twoBedroom: twoBedroomCheck,
+            twoBedroomPrice: twoBedroomLeasePrice,
             twoBedroomImage: twoBedroomImage,
-            threeBedroomCheck: threeBedroomCheck,
-            threeBedroomLeasePrice: threeBedroomLeasePrice,
+            threeBedroom: threeBedroomCheck,
+            threeBedroomPrice: threeBedroomLeasePrice,
             threeBedroomImage: threeBedroomImage
         };
 
         //Test
         console.log("Apt name: " + data.apartName + " LeaseTerm " + data.leaseTerm +
             " Pets: " + data.pets + " Location: " + data.location + " Description:" + data.description + " Studio: " + data.studioCheck +
-            " Studio LeasePrice: " + data.studioLeasePrice + " One bedroom: " +
-            "" + data.oneBedroomCheck + " One bed LeasePrice " + data.oneBedroomLeasePrice +
-            " Two bedRoom " + data.twoBedroomCheck + " Lease Price: " + data.twoBedroomLeasePrice +
-            " Three bedroom: " + data.threeBedroomCheck + " LeasePrice: " + data.threeBedroomLeasePrice);
+            " Studio LeasePrice: " + data.studioPrice + " One bedroom: " +
+            "" + data.oneBedroom + " One bed LeasePrice " + data.oneBedroomPrice +
+            " Two bedRoom " + data.twoBedroom + " Lease Price: " + data.twoBedroomPrice +
+            " Three bedroom: " + data.threeBedroom + " LeasePrice: " + data.threeBedroomPrice);
 
         $http.post("php_server/API/createApartment.api.php", data).success(function (response) {
             console.log("Test" + response);
@@ -125,6 +123,12 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state) {
 
         $http.post('php_server/API/createApartment.api.php', data).success(function (response) {
             console.log("Test" + response);
+            //If success, send the admin to the admin dash to update info
+            if (response == "success") {
+                $state.go('/admin-dash');
+            } else {
+                $state.go('/');
+            }
             localStorage.setItem("token", JSON.stringify(response));
 
         }).error(function (error) {
@@ -141,7 +145,7 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state) {
     //login function
     $scope.login = function () {
         var data = {
-            login:"login",
+            login: "login",
             email: $scope.loginEmail,
             password: $scope.loginPassword
         }
@@ -150,6 +154,13 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state) {
 
         $http.post('php_server/API/createApartment.api.php', data).success(function (response) {
             console.log("Test" + response);
+
+            //If success, send the admin to the admin dash to update info
+            if (response == "success") {
+                $state.go('/admin-dash');
+            } else {
+                $state.go('/');
+            }
             localStorage.setItem("token", JSON.stringify(response));
 
         }).error(function (error) {
@@ -187,15 +198,15 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state) {
 
     function searchData() {
         //Get all the data from the base to perform display on the UI
-        $http.post("../php_server/API/display.record.api.php").success(function (response) {
+        $http.post("php_server/API/display.record.api.php").success(function (response) {
 
             console.log("Apt name: " + response.apartName + " LeaseTerm " + response.leaseTerm +
-                " Pets: " + response.pets + " Studio: " + response.studioCheck +
-                " Studio LeasePrice: " + response.studioLeasePrice + " One bedroom: "
-                + response.oneBedroomCheck + " One bed LeasePrice " + response.oneBedroomLeasePrice +
-                " Two bedRoom " + response.twoBedroomCheck + " Lease Price: " +
-                response.twoBedroomLeasePrice + " Three bedroom: " + response.threeBedroomCheck + " LeasePrice: "
-                + response.threeBedroomLeasePrice);
+                " Pets: " + response.pets + " Studio: " + response.studio +
+                " Studio LeasePrice: " + response.studioPrice + " One bedroom: "
+                + response.oneBedroom + " One bed LeasePrice " + response.oneBedroomPrice +
+                " Two bedRoom " + response.twoBedroom + " Lease Price: " +
+                response.twoBedroomPrice + " Three bedroom: " + response.threeBedroom + " LeasePrice: "
+                + response.threeBedroomPrice);
             localStorage.setItem("token", JSON.stringify(response));
 
             $state.go("/");
@@ -204,8 +215,5 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state) {
             //Catch errors here
 
         });
-
     }
-
-
-})
+});

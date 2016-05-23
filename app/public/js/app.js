@@ -43,7 +43,7 @@ apartmentSearch.config(['$stateProvider', '$urlRouterProvider',
             })
 
             .state('/admin-register-login', {
-                url: '/sign-login',
+                url: '/login',
                 templateUrl: 'views/authSignUp.html',
                 controller:'CrudController'
             })
