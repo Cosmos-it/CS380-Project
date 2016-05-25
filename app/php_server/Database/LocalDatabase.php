@@ -125,19 +125,6 @@ class LocalDatabase
             die($output);
         }
     }
-
-    public function convertToJson($data)
-    {
-        global $connection;
-        $result = mysqli_fetch_all($data, $connection);
-        $json = json_encode($result);
-
-        return $json;
-    }
-
-    /****************************************
-     * Magic method clone is empty to prevent duplication of connection
-     */
     private function __clone()
     {
     }

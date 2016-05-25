@@ -4,7 +4,10 @@
 
 'use strict';
 
-var apartmentSearch = angular.module('apartmentSearch', ['ui.router']);
+var apartmentSearch = angular.module('apartmentSearch', ['ui.router', 'angularFileUpload']).run(["$rootScope", function ($rootScope) {
+    $rootScope.userId = 2;
+
+}]);
 
 // configure our routes
 apartmentSearch.config(['$stateProvider', '$urlRouterProvider',
@@ -39,13 +42,13 @@ apartmentSearch.config(['$stateProvider', '$urlRouterProvider',
             .state('/apartment-profile', {
                 url: '/profile',
                 templateUrl: 'views/apartment-profile.html',
-                controller:'CrudController'
+                controller: 'CrudController'
             })
 
             .state('/admin-register-login', {
                 url: '/login',
                 templateUrl: 'views/authSignUp.html',
-                controller:'CrudController'
+                controller: 'CrudController'
             })
     }]);
 

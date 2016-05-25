@@ -2,7 +2,8 @@
  * Created by Taban on 5/5/16.
  */
 
-apartmentSearch.controller('CrudController', function ($scope, $http, $state) {
+apartmentSearch.controller('CrudController', function ($scope, $http, $state, $timeout, $upload) {
+
     /* errors array */
     var errors = {
         nameError: "Valid Apartment name",
@@ -16,82 +17,36 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state) {
     if ($scope.apartName == undefined) $scope.nameError = errors.nameError;
     // if ($scope.leaseTermError == undefined) $scope.leaseTermError = errors.leaseTermError;
 
+    //Submit function
     $scope.submitInfo = function () {
         /* assignment */
-        var apartName = $scope.info.apartName;
         var leaseTerm = $scope.info.leaseTerm;
         var location = $scope.info.petsCheckBox;
         var description = $scope.info.description;
-        var studioCheck = $scope.info.studioChecked;
-        var oneBedroomCheck = $scope.info.oneChecked;
-        var twoBedroomCheck = $scope.info.twoChecked;
-        var threeBedroomCheck = $scope.info.threeChecked;
-        var studioLeasePrice = $scope.info.sPrice;
-        var studioImage = $scope.info.studioImage;
-        var oneBedroomLeasePrice = $scope.info.onePrice;
-        var oneBedroomImage = $scope.info.oneImage;
-        var twoBedroomLeasePrice = $scope.info.twoPrice;
-        var twoBedroomImage = $scope.info.twoImage;
-        var threeBedroomLeasePrice = $scope.info.threePrice;
-        var threeBedroomImage = $scope.info.threeImage;
         var petsCheckBox = $scope.info.petsCheckBox;
 
+
         //Text validation and assigning
-        if (apartName == undefined) apartName = null;
         if (description == undefined) description = null;
 
         //Integer for lease term validation and assigning
         if (leaseTerm == undefined) leaseTerm = null;
 
-        //Checkbox validation and assigning
-        if (petsCheckBox == undefined) petsCheckBox = false;
-        if (studioCheck == undefined) studioCheck = false;
-        if (oneBedroomCheck == undefined) oneBedroomCheck = false;
-        if (twoBedroomCheck == undefined) twoBedroomCheck = false;
-        if (threeBedroomCheck == undefined) threeBedroomCheck = false;
-
-        //Price validation and assigning
-        if (studioLeasePrice == undefined) studioLeasePrice = 0.00;
-        if (oneBedroomLeasePrice == undefined) oneBedroomLeasePrice = 0.00;
-        if (twoBedroomLeasePrice == undefined) twoBedroomLeasePrice = 0.00;
-        if (threeBedroomLeasePrice == undefined) threeBedroomLeasePrice = 0.00;
-
-        //Image validation and assigning
-        if (studioImage == undefined) studioImage = null;
-        if (oneBedroomImage == undefined) oneBedroomImage = null;
-        if (twoBedroomImage == undefined) twoBedroomImage = null;
-        if (threeBedroomImage == undefined) threeBedroomImage = null;
         if (location == undefined) location = null;
+        if (petsCheckBox == undefined) petsCheckBox = false;
 
         //Grab data
         var data = {
             createApartment: "create",
-            name: apartName,
             lease: leaseTerm,
             pets: petsCheckBox,
             address: location,
-            description: description,
-            studio: studioCheck,
-            studioPrice: studioLeasePrice,
-            studioImage: studioImage,
-            oneBedroom: oneBedroomCheck,
-            oneBedroomPrice: oneBedroomLeasePrice,
-            oneBedroomImage: oneBedroomImage,
-            twoBedroom: twoBedroomCheck,
-            twoBedroomPrice: twoBedroomLeasePrice,
-            twoBedroomImage: twoBedroomImage,
-            threeBedroom: threeBedroomCheck,
-            threeBedroomPrice: threeBedroomLeasePrice,
-            threeBedroomImage: threeBedroomImage
+            description: description
         };
 
         //Test
         console.log("Apt name: " + data.apartName + " LeaseTerm " + data.leaseTerm +
-            " Pets: " + data.pets + " Location: " + data.location + " Description:" + data.description + " Studio: " + data.studioCheck +
-            " Studio LeasePrice: " + data.studioPrice + " One bedroom: " +
-            "" + data.oneBedroom + " One bed LeasePrice " + data.oneBedroomPrice +
-            " Two bedRoom " + data.twoBedroom + " Lease Price: " + data.twoBedroomPrice +
-            " Three bedroom: " + data.threeBedroom + " LeasePrice: " + data.threeBedroomPrice);
+            " Pets: " + data.pets + " Location: " + data.location + " Description:" + data.description);
 
         $http.post("php_server/API/createApartment.api.php", data).success(function (response) {
             console.log("Test" + response);
@@ -124,15 +79,12 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state) {
         $http.post('php_server/API/createApartment.api.php', data).success(function (response) {
             console.log("Test" + response);
             //If success, send the admin to the admin dash to update info
-            if (response == "success") {
-                $state.go('/admin-dash');
-            } else {
-                $state.go('/');
-            }
+            $state.go('/admin-dash');
             localStorage.setItem("token", JSON.stringify(response));
 
         }).error(function (error) {
             //Catch server errors
+            $state.go("/");
 
         });
     };//End of sign up function
@@ -141,7 +93,6 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state) {
     /****************** Check for undefined fields and show errors *********************/
     if ($scope.loginEmail == undefined) $scope.loginEmailError = errors.emailError;
     if ($scope.loginPassword == undefined) $scope.loginPasswordError = errors.passwordError;
-
     //login function
     $scope.login = function () {
         var data = {
@@ -150,25 +101,170 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state) {
             password: $scope.loginPassword
         }
         //Test login here
-        console.log("Email: " + data.email + " |Password: " + data.password);
+        console.log("Email: " + data.email + " | Password: " + data.password);
 
         $http.post('php_server/API/createApartment.api.php', data).success(function (response) {
             console.log("Test" + response);
 
             //If success, send the admin to the admin dash to update info
-            if (response == "success") {
-                $state.go('/admin-dash');
-            } else {
-                $state.go('/');
-            }
+            $state.go('/admin-dash');
+
             localStorage.setItem("token", JSON.stringify(response));
 
         }).error(function (error) {
             //Catch server errors
 
+            $state.go('/');
+
         });
 
     };//End of login function
+
+    //Upload image
+    $scope.uploadResult = [];
+    $scope.upLoadImage = function () {
+        var file = document.getElementById('file').files[0];
+        //$files: an array of files selected, each file has name, size, and type.
+        if (!file) return;
+
+        console.log(file);
+        var image = "image";
+        $upload.upload({
+            url: 'php_server/API/uploadImage.php',
+            data: {file: file, upload: image}
+        }).then(function (resp) {
+            // file is ImageUpload successfully
+            console.log(resp.data);
+            $scope.data = resp.data;
+        });
+    };
+
+
+    $scope.uploadResult = [];
+    $scope.studioImageUpload = function () {
+        var fileStudio = document.getElementById('fileStudio').files[0];
+        //$files: an array of files selected, each file has name, size, and type.
+        if (!fileStudio) return;
+
+        console.log(fileStudio);
+        var image = "image";
+        $upload.upload({
+            url: 'php_server/API/uploadImage.php',
+            data: {file: fileStudio, upload: image}
+        }).then(function (resp) {
+            // file is ImageUpload successfully
+            console.log(resp.data);
+            $scope.studioImage = resp.data;
+        });
+    };
+
+    //Upload image
+    $scope.uploadResult = [];
+    $scope.oneBedroomImageUpload = function () {
+        var oneBed = document.getElementById('oneBed').files[0];
+        //$files: an array of files selected, each file has name, size, and type.
+        if (!oneBed) return;
+
+        console.log(oneBed);
+        var image = "image";
+        $upload.upload({
+            url: 'php_server/API/uploadImage.php',
+            data: {file: oneBed, upload: image}
+        }).then(function (resp) {
+            // file is ImageUpload successfully
+            console.log(resp.data);
+            $scope.oneBedImage = resp.data;
+        });
+    };
+
+
+    //Upload image
+    $scope.uploadResult = [];
+    $scope.twoBedroomImageUpload = function () {
+        var twoBed = document.getElementById('twoBed').files[0];
+        //$files: an array of files selected, each file has name, size, and type.
+        if (!twoBed) return;
+
+        console.log(twoBed);
+        var image = "image";
+        $upload.upload({
+            url: 'php_server/API/uploadImage.php',
+            data: {file: twoBed, upload: image}
+        }).then(function (resp) {
+            // file is ImageUpload successfully
+            console.log(resp.data);
+            $scope.twoBedImage = resp.data;
+        });
+    };
+
+
+    //Upload image
+    $scope.uploadResult = [];
+    $scope.threeBedroomImageUpload = function () {
+        var threeBed = document.getElementById('threeBed').files[0];
+        //$files: an array of files selected, each file has name, size, and type.
+        if (!threeBed) return;
+
+        console.log(threeBed);
+        var image = "image";
+        $upload.upload({
+            url: 'php_server/API/uploadImage.php',
+            data: {file: threeBed, upload: image}
+        }).then(function (resp) {
+            // file is ImageUpload successfully
+            console.log(resp.data);
+            $scope.threeBedImage = resp.data;
+        });
+    };
+
+
+    //Saving description to the database
+    $scope.saveDescription = function () {
+
+        var description = $scope.Description.description;
+        var data = {
+            descriptionTitle: "description",
+            description: description
+        };
+
+        $http.post("createApartment.api.php", data).success(function (response) {
+
+        });
+        console.log(data.description);
+    };
+
+    //Submit Room Type
+    $scope.submitRoomType = function () {
+        var data = null;
+        try {
+            data = {
+                roomType: "roomType",
+                studioCheck: $scope.info.studioCheck,
+                studioPrice: $scope.info.studioPrice,
+                oneBedroom: $scope.info.oneChecked,
+                oneBedroomPrice: $scope.info.onePrice,
+                twoBedroom: $scope.info.twoChecked,
+                twoBedroomPrice: $scope.info.twoPrice,
+                threeBedroom: $scope.info.threeChecked,
+                threeBedroomPrice: $scope.threePrice
+            };
+
+            console.log("Studio: " + data.studioCheck + " " + data.studioPrice + " | " +
+                "One bedroom: " + data.oneBedroom + " " + data.oneBedroomPrice + " | " +
+                "Two bedroom: " + data.twoBedroom + " " + data.twoBedroomPrice + " | " +
+                "Three bedroom: " + data.threeBedroom + " " + data.threeBedroomPrice)
+
+        } catch (e) {
+            console.log(e.message);
+        }
+
+
+        // $http.post("createApartment.api.php", data).success(function (response) {
+        //
+        // });
+
+
+    };
 
     //Open detail info function
     function openDetailInfo() {
@@ -195,6 +291,7 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state) {
         //Server API
 
     }
+
 
     function searchData() {
         //Get all the data from the base to perform display on the UI

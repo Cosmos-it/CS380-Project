@@ -48,7 +48,7 @@ class Apartment implements Apartment_InterFace
         return $this->image;
     }
 
-    /**Check this implement later during image upload.
+    /**Check this implement later during image ImageUpload.
      *================================================
      * Image declaration is not used yet.
      *

@@ -9,7 +9,7 @@
 /******************* IMPORT FILES ***********************/
 require_once("../Auto-Load.php");
 require_once("../classes/ApartmentV2.php");
-require_once ("../classes/Login.php");
+require_once("../classes/Admin.php");
 require_once("../Functions/included_functions.php");
 
 /************* Database connections *********************/
@@ -18,6 +18,7 @@ $connection = $database->getConnection();
 
 /************** Data from the front-end ******************/
 $data = json_decode(file_get_contents("php://input"));
+
 
 /******** Create Apartment details function **************
  * @param $data
@@ -71,7 +72,8 @@ function createApartment($data)
         echo json_encode("failed");
     }
     $connection = null; //Closed connection
-}
+
+}//END OF FUNCTION
 
 /* Sign up function */
 function signUp($data)
@@ -86,12 +88,29 @@ function signUp($data)
     $result = mysqli_query($connection, $sql);
     confirm_query($result);
 
-    $last_id = $connection->insert_id;
-
-    echo json_encode($last_id);
+    echo json_encode("success");
 
     $connection = null;
-}
+
+}//END OF FUNCTION
+
+
+/* Sign up function */
+function roomTypeInfo($data)
+{
+    $name = $data->name;
+    $email = $data->email;
+    $password = $data->password;
+    $sql = "INSERT INTO apartment (name, email, password)";
+    $sql .= " VALUES ( '{$name}', '{$email}', '{$password}')";
+    $result = query_db($sql);
+    confirm_query($result);
+
+    echo json_encode("success");
+
+    $connection = null;
+
+}//END OF FUNCTION
 
 /* Login function  */
 /**
@@ -105,19 +124,37 @@ function loginAdmin($data)
     $login = Admin::createAdmin();
     $email = $login->setEmail($data->email);
     $password = $login->setPassword($data->passoword);
+    $password = sha1($data->password);
+    $username = $data->username;
+    $userInfo = "SELECT email FROM users WHERE email='$username' AND password='$password'";
+    $userInfo = $userInfo->fetchAll();
+    $token = NULL;
+    if (count($userInfo) == 1){
+        //This means that the user is logged in and let's givem a token :D :D :D
+        $token = $username . " | " . uniqid() . uniqid() . uniqid();
+
+        $q = "UPDATE apartment SET token=:token WHERE email=:email AND password=:password";
+        $query = mysqli_query($connection, $q);
+        
+        echo json_encode($token);
+    } else {
+        echo "ERROR";
+    }
     $sql = "SELECT email, password FROM apartment ";
     $sql .= " WHERE email='{$email}' AND password='{$password}'";
     $result = mysqli_guery($connection, $sql);
     confirm_query($result);
     $connection = null;//Close connection
-}
+
+}//E O F
 
 /************** Call the functions ******************/
 try {
 
     if ($data->register == "register") {
         signUp($data);
-
+    } elseif ($data->createApartment == "roomType") {
+        roomTypeInfo($data);
     } elseif ($data->createApartment == "create") {
         createApartment($data);
 

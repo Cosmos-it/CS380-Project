@@ -660,7 +660,10 @@ product_id</columns>
       <column id="52" parent="7" name="description">
         <data-type>text</data-type>
       </column>
-      <key id="53" parent="7" name="PRIMARY">
+      <column id="53" parent="7" name="token">
+        <data-type>text</data-type>
+      </column>
+      <key id="54" parent="7" name="PRIMARY">
         <columns>apt_id</columns>
         <primary>1</primary>
       </key>

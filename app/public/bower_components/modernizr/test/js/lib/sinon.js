@@ -4417,8 +4417,8 @@
             }
         }
 
-        // An upload object is created for each
-        // FakeXMLHttpRequest and allows upload
+        // An ImageUpload object is created for each
+        // FakeXMLHttpRequest and allows ImageUpload
         // events to be simulated using uploadProgress
         // and uploadError.
         function UploadProgress() {

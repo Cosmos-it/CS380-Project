@@ -18,6 +18,7 @@
           type='text/css'>    <!-- Angular scripts -->
     <script src="public/angular-js/bower_components/angular/angular.min.js"></script>
     <script src="public/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="public/angular-js/angular-file-upload.js"></script>
 
 
     <style>

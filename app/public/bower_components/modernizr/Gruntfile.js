@@ -27,7 +27,7 @@ module.exports = function (grunt) {
                 APP_DIR_FOR_CODE_COVERAGE: 'test/coverage/instrument',
                 urls: [
                     'http://localhost:9999/test/unit.html',
-                    'http://localhost:9999/test/index.html'
+                    'http://localhost:9999/test/index.php'
                 ]
             }
         },
