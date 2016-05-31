@@ -12,8 +12,12 @@ require_once("../classes/Preference.php");
 
 $databaseInstance = LocalDatabase::getInstance();
 $connection = $databaseInstance->getConnection();
+//
+//$data = displayData();
 
-$data = displayData();
+$data = json_decode(file_get_contents("php://input"));
+
+
 
 //Search database
 function searchWithThreeParameters($data, $bedType, $cost, $location)
@@ -26,6 +30,34 @@ function searchWithThreeParameters($data, $bedType, $cost, $location)
         }
     }
 }
+
+$email = "test@test.com";
+$password = sha1("1");
+
+$query = "SELECT apt_id  FROM apartmentDB.apartment" . " WHERE email ='{$email}' AND password ='{$password}' LIMIT 1";
+$result = mysqli_query($connection, $query);
+$array_data = array();
+
+$row = mysqli_fetch_assoc($result);
+
+if (!empty($row)) {
+    session_start();
+    $row = $row['apt_id'];
+    $_SESSION["username"] = $row;
+    echo ($_SESSION["username"]);
+} else {
+    echo "error login";
+}
+
+//if ($result) {
+//    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+//    session_start();
+////        $_SESSION['username'] = uniqid('ang_');
+//    echo $_SESSION[$row['apt_id']];
+//} else {
+//    echo "fail";
+//}
+
 
 //Close database after successful connection
 if (isset($connection)) {

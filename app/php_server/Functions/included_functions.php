@@ -1,34 +1,29 @@
 <?php
 
-/* redirect pages */
-function redirect_to($new_location)
-{
-    header("Location: " . trim($new_location));
-    exit;
-}
-
 /*******************************
  * Takes in raw data
  * Does array fetch and
  * then encode the data to
  * JSON type before returning data
- ***************************************/
+ **************************************
+ * @param $data
+ * @return string
+ */
+
+
 function convertToJson($data)
 {
-
     global $connection;
     $result = mysqli_fetch_all($connection, $data);
     $json = json_encode($result);
 
     return $json;
-
 }
 
 function mysql_prep($string)
 {
     global $connection;
     $result = mysqli_real_escape_string($connection, $string);
-
     return $result;
 }
 
@@ -49,7 +44,6 @@ function confirm_query($result_set)
     }
 }
 
-
 /*  
 Call this method when a message needs to be encoded or decoded 
     once it reaches the user on the other side of the client. 
@@ -66,10 +60,8 @@ function encode_message($stringText)
     }
 }
 
-
 function decode_message($stringText)
 {
-
     if (empty($stringText)) {
         return exception();
     } else {
@@ -77,13 +69,15 @@ function decode_message($stringText)
     }
 }
 
-
+/******** Display all data **************/
 function displayData()
 {
     global $connection;
-//    $sql = 'SELECT * FROM apartmentDB.apartment';
+    $sql = "SELECT * FROM apartment INNER JOIN location ON apartment.Apt_id = location.Apt_id" .
+        "INNER JOIN Studio ON apartment.Apt_id = Studio._id   INNER JOIN OneBedroom ON apartment.Apt_id" .
+        "= OneBedroom._id INNER JOIN TwoBedroom ON apartment.Apt_id = TwoBedroom._id" .
+        "INNER JOIN ThreeBedroom ON apartment.Apt_id = ThreeBedroom._id WHERE ";
 
-    $sql = "SELECT * FROM apartment   INNER JOIN location ON apartment.Apt_id = location.Apt_id   INNER JOIN Studio ON apartment.Apt_id = Studio._id   INNER JOIN OneBedroom ON apartment.Apt_id = OneBedroom._id   INNER JOIN TwoBedroom ON apartment.Apt_id = TwoBedroom._id   INNER JOIN ThreeBedroom ON apartment.Apt_id = ThreeBedroom._id";
     //Performing mysql query
     $result = mysqli_query($connection, $sql);
     if (!$result) {
@@ -95,7 +89,7 @@ function displayData()
     while ($row = mysqli_fetch_assoc($result)) {
         $array_data[] = $row;
     }
-
     return $array_data;
+
 }
 

@@ -51,7 +51,17 @@ apartmentSearch.config(['$stateProvider', '$urlRouterProvider',
 
 
 apartmentSearch.run(function ($rootScope, $location, Authentication) {
-    Authentication.logout();
+    var routesPermissions = ['/dashBoard'];
+    $rootScope.$on('$routeChangeStart', function () {
+        if (routesPermissions.indexOf($location.path()) != -1) {
+            var connected = Authentication.isLogged();
+            connected.then(function (msg) {
+                if (!msg.data) {
+                    Authentication.logout(); // this redirect and delete data entered manually
+                }
+            });
+        }
+    });
 });
 
 

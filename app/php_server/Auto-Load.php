@@ -13,6 +13,5 @@ include_once('Database/LocalDatabase.php'); //Local database
 include_once('Functions/included_functions.php');
 include_once('Functions/validation_functions.php');
 include_once('Functions/included_functions.php');
-include_once('Functions/check_session.php');
 
 

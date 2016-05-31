@@ -33,7 +33,7 @@ function createApartment($data)
     $apartment->setPets($data->pets);
     $apartment->setLeaseTerm($data->lease);
     $apartment->setDescription($data->description);
-
+    
     $apartment->setAddress($data->address);
     
     /* Create Studio */
@@ -55,7 +55,7 @@ function createApartment($data)
     $apartment->getThreeBedroom()->setAvailable($data->threeBedroom);
 //    $apartment->getThreeBedroom()->getImage($data->threeBedroomImage);
     $apartment->getThreeBedroom()->getPrice($data->threeBedroomPrice);
-
+    
     /***************************************************************************
      *   INSERT DATA INTO DATABASE
      ***************************************************************************/
@@ -65,51 +65,82 @@ function createApartment($data)
     $result = mysqli_query($connection, $sql);
     confirm_query($sql);
     /*$last_id = $connection->insert_id;*/
-
+    
     if ($result) {
         echo json_encode("success");
     } else {
         echo json_encode("failed");
     }
+    
     $connection = null; //Closed connection
-
+    
 }//END OF FUNCTION
 
 /* Sign up function */
 function signUp($data)
 {
-
+    
     global $connection;
     $name = $data->name;
     $email = $data->email;
     $password = sha1($data->password);
-    $sql = "INSERT INTO apartment (name, email, password)";
+    $sql = "INSERT INTO apartment (username, email, password)";
     $sql .= " VALUES ( '{$name}', '{$email}', '{$password}')";
     $result = mysqli_query($connection, $sql);
-    confirm_query($result);
-
-    echo json_encode("success");
-
+    
+    if ($result) {
+        echo "success";
+    } else {
+        echo "User name exists";
+    }
+    
+    
     $connection = null;
-
+    
 }//END OF FUNCTION
+
+
+function loginAdmin($admin)
+{
+    global $connection;
+    $email = $admin->email;
+    $password = $admin->password;
+    $password = sha1($password);
+    
+    $query = "SELECT apt_id  FROM apartmentDB.apartment" . " WHERE email ='{$email}' AND password ='{$password}' LIMIT 1";
+    $result = mysqli_query($connection, $query);
+
+    $row = mysqli_fetch_assoc($result);
+
+    if (!empty($row)) {
+        session_start();
+        $row = $row['apt_id'];
+        $_SESSION["apt_id"] = $row;
+        echo ($_SESSION["apt_id"]);
+
+    } else {
+        echo "fail";
+    }
+
+    $connection = null;//Close connection
+    
+}//E O F
 
 
 /* Sign up function */
 function roomTypeInfo($data)
 {
-    $name = $data->name;
-    $email = $data->email;
-    $password = $data->password;
-    $sql = "INSERT INTO apartment (pets, description, p)";
-    $sql .= " VALUES ( '{$name}', '{$email}', '{$password}')";
+    $id = $_GET['apt_id'];
+    $pets = $data->pets;
+    $description = $data->description;
+    $sql = "UPDATE apartment SET pets='{$pets}', description='{$description}' WHERE apt_id='{$id}')";
     $result = query_db($sql);
     confirm_query($result);
-
+    
     echo json_encode("success");
-
+    
     $connection = null;
-
+    
 }//END OF FUNCTION
 
 /* Login function  */
@@ -119,45 +150,9 @@ function roomTypeInfo($data)
  */
 
 
-function loginAdmin($admin)
-{
-    $email = $admin->email;
-    $password = $admin->password;
-
-    if ($email == "sdf@hotmail.com" && $password == "123") {
-        session_start();
-        $_SESSION['user'] = uniqid('ang_');
-        echo $_SESSION['user'];
-    } else {
-        echo "fail";
-    }
-//    global $connection;
-//
-//    $email = $data->email;
-//    $password = sha1($data->password);
-//    $userInfo = "SELECT email, password FROM apartment WHERE email='$email' AND password='$password'";
-//    $userInfo = mysqli_query($connection, $userInfo);
-//    $token = "";
-//
-//    if ($userInfo) {
-//        //This means that the user is logged in and let's givem a token :D :D :D
-//        $token = $email . " | " . uniqid() . uniqid() . uniqid();
-//
-//        $q = "INSERT INTO apartment (token) VALUES ('{$token}')";
-//        $query = mysqli_query($connection, $q);
-//
-//        echo json_encode($token);
-//    } else {
-//        echo "ERROR";
-//    }
-//
-//    $connection = null;//Close connection
-
-}//E O F
-
 /************** Call the functions ******************/
 try {
-
+    
     if ($data->register == "register") {
         signUp($data);
     } elseif ($data->createApartment == "roomType") {
@@ -170,7 +165,7 @@ try {
         echo "<div style='color:red;'><h1 style='text-align: center; margin-top: 50px;'>STOP IT!<br>
               <span style='font-size: 70px;'>&#x1f620;</span><br>You have no permission.</h1></div>";
     }
-
+    
 } catch (Exception $e) {
     echo $e->getMessage();
 }

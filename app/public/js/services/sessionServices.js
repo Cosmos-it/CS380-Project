@@ -12,8 +12,7 @@ apartmentSearch.factory("SessionService", function () {
 
         get: function (key) {
             return sessionStorage.getItem(key);
-        }
-        ,
+        },
 
         destroy: function () {
             for (var key in sessionStorage) {
