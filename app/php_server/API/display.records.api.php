@@ -55,6 +55,14 @@ function display()
 }
 
 
+function readAllData()
+{
+
+
+    
+}
+
+
 
 
 

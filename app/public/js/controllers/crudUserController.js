@@ -2,7 +2,7 @@
  * Created by Taban on 5/5/16.
  */
 
-apartmentSearch.controller('CrudController', function ($scope, $http, $state, $timeout, $upload) {
+apartmentSearch.controller('CrudController', function ($scope, $http, $state, $timeout, $upload, Authentication) {
 
     /* errors array */
     var errors = {
@@ -20,38 +20,19 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state, $t
     //Submit function
     $scope.submitInfo = function () {
         /* assignment */
-        var leaseTerm = $scope.info.leaseTerm;
-        var location = $scope.info.petsCheckBox;
-        var description = $scope.info.description;
-        var petsCheckBox = $scope.info.petsCheckBox;
-
-
-        //Text validation and assigning
-        if (description == undefined) description = null;
-
-        //Integer for lease term validation and assigning
-        if (leaseTerm == undefined) leaseTerm = null;
-
-        if (location == undefined) location = null;
-        if (petsCheckBox == undefined) petsCheckBox = false;
-
-        //Grab data
         var data = {
             createApartment: "create",
-            lease: leaseTerm,
-            pets: petsCheckBox,
-            address: location,
-            description: description
+            leaseTerm: $scope.leaseTerm,
+            pets: $scope.petsCheckBox,
+            location: $scope.location
         };
 
         //Test
-        console.log("Apt name: " + data.apartName + " LeaseTerm " + data.leaseTerm +
-            " Pets: " + data.pets + " Location: " + data.location + " Description:" + data.description);
+        console.log("LeaseTerm " + data.leaseTerm +
+            " Pets: " + data.pets + " Location: " + data.location + " Description:");
 
         $http.post("php_server/API/createApartment.api.php", data).success(function (response) {
             console.log("Test" + response);
-            localStorage.setItem("token", JSON.stringify(response));
-
         }).error(function (error) {
             //Catch server errors
 
@@ -84,9 +65,10 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state, $t
 
         }).error(function (error) {
             //Catch server errors
-            $state.go("/");
+            $state.go("/admin-register");
 
         });
+
     };//End of sign up function
 
 
@@ -99,26 +81,11 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state, $t
             login: "login",
             email: $scope.loginEmail,
             password: $scope.loginPassword
-        }
-        //Test login here
-        console.log("Email: " + data.email + " | Password: " + data.password);
-
-        $http.post('php_server/API/createApartment.api.php', data).success(function (response) {
-            console.log("Test" + response);
-
-            //If success, send the admin to the admin dash to update info
-            $state.go('/admin-dash');
-
-            localStorage.setItem("token", JSON.stringify(response));
-
-        }).error(function (error) {
-            //Catch server errors
-
-            $state.go('/');
-
-        });
+        };
+        Authentication.login(data, $scope);
 
     };//End of login function
+
 
     //Upload image
     $scope.uploadResult = [];
@@ -220,7 +187,6 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state, $t
 
     //Saving description to the database
     $scope.saveDescription = function () {
-
         var description = $scope.Description.description;
         var data = {
             descriptionTitle: "description",
@@ -269,7 +235,7 @@ apartmentSearch.controller('CrudController', function ($scope, $http, $state, $t
     //Open detail info function
     function openDetailInfo() {
 
-        $routeprovider.go("/details");
+        $state.go("/details");
         //Then load the detail information for this specific data
 
         //Server API

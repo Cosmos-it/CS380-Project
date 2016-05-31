@@ -65,10 +65,13 @@
 <!------------- JavaScript file ------------>
 <script src="public/css/js/vendor/jquery.min.js"></script>
 <script src="public/css/js/bower_components/jquery-ui/jquery-ui.min.js"></script>
-<script src="public/css/js/foundation.min.js"></script>
-<script src="public/css/js/foundation.min.js"></script>
+<!--<script src="public/js/load_js_files.js"></script>-->
 <script src="public/js/app.js"></script>
+<script src="public/css/js/foundation.min.js"></script>
+<script src="public/css/js/foundation.min.js"></script>
 <script src="public/js/controllers/crudUserController.js"></script>
+<script src="public/js/services/authentication.js"></script>
+<script src="public/js/services/sessionServices.js"></script>
 <script src="public/js/custom-ui-styling/custom-styling-jquery.js"></script>
 
 <script>

@@ -59,8 +59,8 @@ function createApartment($data)
     /***************************************************************************
      *   INSERT DATA INTO DATABASE
      ***************************************************************************/
-    $sql = "INSERT INTO apartment(name, leaseTerm, pets, description)";
-    $sql .= " VALUES( '{$apartment->getAptName()}', '{$apartment->getLeaseTerm()}',";
+    $sql = "INSERT INTO apartment(leaseTerm, pets, description)";
+    $sql .= " VALUES('{$apartment->getLeaseTerm()}',";
     $sql .= "'{$apartment->getPets()}', '{$apartment->getDescription()}')";
     $result = mysqli_query($connection, $sql);
     confirm_query($sql);
@@ -82,7 +82,7 @@ function signUp($data)
     global $connection;
     $name = $data->name;
     $email = $data->email;
-    $password = $data->password;
+    $password = sha1($data->password);
     $sql = "INSERT INTO apartment (name, email, password)";
     $sql .= " VALUES ( '{$name}', '{$email}', '{$password}')";
     $result = mysqli_query($connection, $sql);
@@ -101,7 +101,7 @@ function roomTypeInfo($data)
     $name = $data->name;
     $email = $data->email;
     $password = $data->password;
-    $sql = "INSERT INTO apartment (name, email, password)";
+    $sql = "INSERT INTO apartment (pets, description, p)";
     $sql .= " VALUES ( '{$name}', '{$email}', '{$password}')";
     $result = query_db($sql);
     confirm_query($result);
@@ -114,37 +114,44 @@ function roomTypeInfo($data)
 
 /* Login function  */
 /**
- * @param $data
+ * @param $admin
  * @throws Exception
  */
-function loginAdmin($data)
+
+
+function loginAdmin($admin)
 {
-    global $connection;
+    $email = $admin->email;
+    $password = $admin->password;
 
-    $login = Admin::createAdmin();
-    $email = $login->setEmail($data->email);
-    $password = $login->setPassword($data->passoword);
-    $password = sha1($data->password);
-    $username = $data->username;
-    $userInfo = "SELECT email FROM users WHERE email='$username' AND password='$password'";
-    $userInfo = $userInfo->fetchAll();
-    $token = NULL;
-    if (count($userInfo) == 1){
-        //This means that the user is logged in and let's givem a token :D :D :D
-        $token = $username . " | " . uniqid() . uniqid() . uniqid();
-
-        $q = "UPDATE apartment SET token=:token WHERE email=:email AND password=:password";
-        $query = mysqli_query($connection, $q);
-        
-        echo json_encode($token);
+    if ($email == "sdf@hotmail.com" && $password == "123") {
+        session_start();
+        $_SESSION['user'] = uniqid('ang_');
+        echo $_SESSION['user'];
     } else {
-        echo "ERROR";
+        echo "fail";
     }
-    $sql = "SELECT email, password FROM apartment ";
-    $sql .= " WHERE email='{$email}' AND password='{$password}'";
-    $result = mysqli_guery($connection, $sql);
-    confirm_query($result);
-    $connection = null;//Close connection
+//    global $connection;
+//
+//    $email = $data->email;
+//    $password = sha1($data->password);
+//    $userInfo = "SELECT email, password FROM apartment WHERE email='$email' AND password='$password'";
+//    $userInfo = mysqli_query($connection, $userInfo);
+//    $token = "";
+//
+//    if ($userInfo) {
+//        //This means that the user is logged in and let's givem a token :D :D :D
+//        $token = $email . " | " . uniqid() . uniqid() . uniqid();
+//
+//        $q = "INSERT INTO apartment (token) VALUES ('{$token}')";
+//        $query = mysqli_query($connection, $q);
+//
+//        echo json_encode($token);
+//    } else {
+//        echo "ERROR";
+//    }
+//
+//    $connection = null;//Close connection
 
 }//E O F
 
@@ -157,7 +164,6 @@ try {
         roomTypeInfo($data);
     } elseif ($data->createApartment == "create") {
         createApartment($data);
-
     } elseif ($data->login == "login") {
         loginAdmin($data);
     } else {
@@ -166,7 +172,7 @@ try {
     }
 
 } catch (Exception $e) {
-    echo $e;
+    echo $e->getMessage();
 }
 
 

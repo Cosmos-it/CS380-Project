@@ -4,37 +4,34 @@
 
 'use strict';
 
-var apartmentSearch = angular.module('apartmentSearch', ['ui.router', 'angularFileUpload']).run(["$rootScope", function ($rootScope) {
-    $rootScope.userId = 2;
-
-}]);
+var apartmentSearch = angular.module('apartmentSearch', ['ui.router', 'angularFileUpload']);
 
 // configure our routes
 apartmentSearch.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise('/display-data');
+        $urlRouterProvider.otherwise('/display');
         $stateProvider
             .state('/display-data', {
-                url: '/display-data',
-                templateUrl: 'views/authSignUp.html',
+                url: '/display',
+                templateUrl: 'views/display-data.html',
                 controller: 'CrudController'
             })
 
             .state('/detail-data', {
-                url: '/detail-data',
+                url: '/detail',
                 templateUrl: 'views/edit-data.html',
                 controller: 'CrudController'
             })
 
             .state('/edit-data', {
-                url: '/edit-data',
+                url: '/edit',
                 templateUrl: 'views/edit-data.html',
                 controller: 'CrudController'
             })
 
             .state('/admin-dash', {
-                url: '/admin-dash',
+                url: '/dashBoard',
                 templateUrl: 'views/admin-dash.html',
                 controller: 'CrudController'
             })
@@ -45,14 +42,17 @@ apartmentSearch.config(['$stateProvider', '$urlRouterProvider',
                 controller: 'CrudController'
             })
 
-            .state('/admin-register-login', {
-                url: '/login',
+            .state('/admin-register', {
+                url: '/admin',
                 templateUrl: 'views/authSignUp.html',
                 controller: 'CrudController'
             })
     }]);
 
 
+apartmentSearch.run(function ($rootScope, $location, Authentication) {
+    Authentication.logout();
+});
 
 
 

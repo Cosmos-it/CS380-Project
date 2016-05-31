@@ -639,7 +639,7 @@ product_id</columns>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="47" parent="7" name="name">
+      <column id="47" parent="7" name="username">
         <mandatory>1</mandatory>
         <data-type>varchar(50)</data-type>
       </column>
@@ -651,21 +651,33 @@ product_id</columns>
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="50" parent="7" name="leaseTerm">
+      <column id="50" parent="7" name="profileImage">
+        <data-type>text</data-type>
+      </column>
+      <column id="51" parent="7" name="leaseTerm">
         <data-type>int(11)</data-type>
       </column>
-      <column id="51" parent="7" name="pets">
+      <column id="52" parent="7" name="pets">
         <data-type>enum(&apos;yes&apos;, &apos;no&apos;)</data-type>
       </column>
-      <column id="52" parent="7" name="description">
+      <column id="53" parent="7" name="description">
         <data-type>text</data-type>
       </column>
-      <column id="53" parent="7" name="token">
+      <column id="54" parent="7" name="token">
         <data-type>text</data-type>
       </column>
-      <key id="54" parent="7" name="PRIMARY">
+      <index id="55" parent="7" name="username">
+        <columns>username</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="56" parent="7" name="PRIMARY">
         <columns>apt_id</columns>
         <primary>1</primary>
+      </key>
+      <key id="57" parent="7" name="username">
+        <columns>username</columns>
+        <underlying-index>username</underlying-index>
       </key>
     </database-model>
   </data-source>

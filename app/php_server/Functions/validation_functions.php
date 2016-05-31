@@ -76,3 +76,16 @@ function form_errors($errors = array())
 
     return $output;
 }
+
+function isLoggedIn() {
+    return (isset($_SESSION['user_id'])) ? true : false;
+}
+
+function user_exists($user_name) {
+    global $connection;
+
+    $sql = "SELECT COUNT(`Apt_id`) FROM apartment WHERE email = '{$user_name}'";
+
+    return $sql;
+
+}

@@ -20,7 +20,7 @@
                 </button>
             </div>
 
-            <div style="padding: 10px;" name="formInfo" ng-submit="submitInfo()" novalidate>
+            <div style="padding: 10px;" name="formInfo"novalidate>
                 <div>
                     <p>Pets allowed?</p>
                     <div class="switch tiny">
@@ -38,9 +38,9 @@
                     <input type="text" name="apartName" ng-model="info.apartName"
                            placeholder="Apartment name">
                     <input type="number" name="leaseTerm" ng-model="info.leaseTerm"
-                           placeholder="Lease Term: 1 (for 1 month)" ng-required="true">
+                           placeholder="Lease Term: 1 (for 1 month)">
                     <input type="text" name="location" ng-model="info.location"
-                           placeholder="Location" ng-required="true">
+                           placeholder="Location">
                     <button class="button" type="submit" ng-disable="submitInformation.$invalid">Save</button>
                 </form>
             </div>
