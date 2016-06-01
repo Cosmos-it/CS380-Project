@@ -27,15 +27,6 @@ function mysql_prep($string)
     return $result;
 }
 
-/**
- * function from (Includes_PHP) Checks
- * if the connection has not failed.
- * Use returned data (if any)
- *
- * @param $result_set
- */
-
-
 function confirm_query($result_set)
 {
     global $connection;
@@ -43,13 +34,6 @@ function confirm_query($result_set)
         die("Database query failed." . mysqli_errno($connection));
     }
 }
-
-/*  
-Call this method when a message needs to be encoded or decoded 
-    once it reaches the user on the other side of the client. 
-    All incoming and out going messages should be encoded using the 
-    base64_decode() 
-*/
 
 function encode_message($stringText)
 {

@@ -19,10 +19,6 @@ $connection = $database->getConnection();
 
 $data = json_decode(file_get_contents("php://input"));
 
-
-//properties of the ImageUpload file
-
-
 try {
     if ($image = $_FILES['file']) {
         profileImage($connection);
@@ -41,13 +37,13 @@ try {
 
 
 } catch (Exception $e) {
-
+    
 }
 
 
 function studioImageUpload($connection)
 {
-    $_SESSION['apt_id'];
+    $session_id = $_GET['id'];
 
     if (isset($_FILES['fstudio'])) {
         //The error validation could be done on the javascript client side.
@@ -55,7 +51,7 @@ function studioImageUpload($connection)
         $file_name = $_FILES['fstudio']['name'];
         $file_size = $_FILES['fstudio']['size'];
         $file_tmp = $_FILES['fstudio']['tmp_name'];
-        $file_type = $_FILES['fstudio']['type'];
+        //$file_type = $_FILES['fstudio']['type'];
         $file_ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
         $extensions = array("jpeg", "jpg", "png");
         if (in_array($file_ext, $extensions) === false) {
@@ -68,7 +64,7 @@ function studioImageUpload($connection)
             $path = 'ImageUpload/' . $file_name;
             move_uploaded_file($file_tmp, $path);
 
-            $sql = "INSERT INTO Studio (image, Apt_id) VALUES ('{$path}', '{$_SESSION['apt_id']}')";
+            $sql = "INSERT INTO Studio (image, Apt_id) VALUES ('{$path}', '{$session_id}')";
             $result = mysqli_query($connection, $sql);
             confirm_query($result);
 
@@ -90,7 +86,7 @@ function studioImageUpload($connection)
 
 function oneBedImageUpload($connection)
 {
-    $Apt_id = 4;
+    $session_id = $_GET['id'];
 
     if (isset($_FILES['oneBed'])) {
         //The error validation could be done on the javascript client side.
@@ -98,7 +94,7 @@ function oneBedImageUpload($connection)
         $file_name = $_FILES['oneBed']['name'];
         $file_size = $_FILES['oneBed']['size'];
         $file_tmp = $_FILES['oneBed']['tmp_name'];
-        $file_type = $_FILES['oneBed']['type'];
+        //$file_type = $_FILES['oneBed']['type'];
         $file_ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
         $extensions = array("jpeg", "jpg", "png");
         if (in_array($file_ext, $extensions) === false) {
@@ -111,7 +107,7 @@ function oneBedImageUpload($connection)
             $path = 'ImageUpload/' . $file_name;
             move_uploaded_file($file_tmp, $path);
 
-            $sql = "INSERT INTO OneBedroom (image, Apt_id) VALUES ('{$path}', '{$Apt_id}')";
+            $sql = "INSERT INTO OneBedroom (image, Apt_id) VALUES ('{$path}', '{$session_id}')";
             $result = mysqli_query($connection, $sql);
             confirm_query($result);
 
@@ -133,7 +129,7 @@ function oneBedImageUpload($connection)
 
 function twoImageUpload($connection)
 {
-    $Apt_id = 4;
+    $session_id = $_GET['id'];
 
     if (isset($_FILES['twoBed'])) {
         //The error validation could be done on the javascript client side.
@@ -141,7 +137,7 @@ function twoImageUpload($connection)
         $file_name = $_FILES['twoBed']['name'];
         $file_size = $_FILES['twoBed']['size'];
         $file_tmp = $_FILES['twoBed']['tmp_name'];
-        $file_type = $_FILES['twoBed']['type'];
+        //$file_type = $_FILES['twoBed']['type'];
         $file_ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
         $extensions = array("jpeg", "jpg", "png");
         if (in_array($file_ext, $extensions) === false) {
@@ -154,7 +150,7 @@ function twoImageUpload($connection)
             $path = 'ImageUpload/' . $file_name;
             move_uploaded_file($file_tmp, $path);
 
-            $sql = "INSERT INTO TwoBedroom (image, Apt_id) VALUES ('{$path}', '{$Apt_id}')";
+            $sql = "INSERT INTO TwoBedroom (image, Apt_id) VALUES ('{$path}', '{$session_id}')";
             $result = mysqli_query($connection, $sql);
             confirm_query($result);
 
@@ -176,7 +172,7 @@ function twoImageUpload($connection)
 
 function threeImageUpload($connection)
 {
-    $Apt_id = 3;
+    $session_id = $_GET['id'];
 
     if (isset($_FILES['threeBed'])) {
         //The error validation could be done on the javascript client side.
@@ -184,7 +180,7 @@ function threeImageUpload($connection)
         $file_name = $_FILES['threeBed']['name'];
         $file_size = $_FILES['threeBed']['size'];
         $file_tmp = $_FILES['threeBed']['tmp_name'];
-        $file_type = $_FILES['threeBed']['type'];
+        //$file_type = $_FILES['threeBed']['type'];
         $file_ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
         $extensions = array("jpeg", "jpg", "png");
         if (in_array($file_ext, $extensions) === false) {
@@ -197,7 +193,7 @@ function threeImageUpload($connection)
             $path = 'ImageUpload/' . $file_name;
             move_uploaded_file($file_tmp, $path);
 
-            $sql = "INSERT INTO ThreeBedroom (image, Apt_id) VALUES ('{$path}', '{$Apt_id}')";
+            $sql = "INSERT INTO ThreeBedroom (image, Apt_id) VALUES ('{$path}', '{$session_id}')";
             $result = mysqli_query($connection, $sql);
             confirm_query($result);
 
@@ -219,7 +215,6 @@ function threeImageUpload($connection)
 
 /**
  * @param $connection
- * @param $data
  */
 function profileImage($connection)
 {
@@ -233,7 +228,6 @@ function profileImage($connection)
         $file_size = $_FILES['file']['size'];
         $file_tmp = $_FILES['file']['tmp_name'];
         //$file_type = $_FILES['file']['type'];
-        $id = $_FILES['id']['key_id'];
         $file_ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
         $extensions = array("jpeg", "jpg", "png");
         if (in_array($file_ext, $extensions) === false) {
@@ -249,21 +243,6 @@ function profileImage($connection)
             $sql = "UPDATE apartment SET profileImage='{$path}' WHERE apt_id='{$session_id}'";
             $result = mysqli_query($connection, $sql);
             confirm_query($result);
-
-            if ($result) {
-                echo ($session_id);
-            } else {
-                echo "error updates";
-            }
-
-            $displayImages = "SELECT image FROM Studio WHERE image= '$path' ";
-            $displayImages .= "LIMIT 1";
-            $result1 = mysqli_query($connection, $displayImages);
-
-//            while ($row = mysqli_fetch_array($result1)) {
-//                $image = $row;
-//                echo $id;
-//            }
 
         } else {
             print_r($errors);

@@ -20,58 +20,31 @@ $connection = $database->getConnection();
 $data = json_decode(file_get_contents("php://input"));
 
 
+//Global initialization
+$apartment = ApartmentV2::CreateApartment();
+
 /******** Create Apartment details function **************
  * @param $data
+ * @param $apartment
  * @throws Exception
  *********************************************************/
-function createApartment($data)
+function createApartment($data, $apartment)
 {
     global $connection;
     /* Create apartment */
-    $apartment = ApartmentV2::CreateApartment();
     $apartment->setAptName($data->name);
     $apartment->setPets($data->pets);
     $apartment->setLeaseTerm($data->lease);
     $apartment->setDescription($data->description);
-    
     $apartment->setAddress($data->address);
-    
-    /* Create Studio */
-    $apartment->getStudio()->setAvailable($data->studio);
-//    $apartment->getStudio()->getImage($data);
-    $apartment->getStudio()->setPrice($data->studioPrice);
-    
-    /* Create getOneBedroom */
-    $apartment->getOneBedroom()->setAvailable($data->oneBedroom);
-//    $apartment->getOneBedroom()->getImage($data->oneBedroomCheck);
-    $apartment->getOneBedroom()->getPrice($data->oneBedroomPrice);
-    
-    /* Create getTwoBedroom */
-    $apartment->getTwoBedroom()->setAvailable($data->twoBedroom);
-//    $apartment->getTwoBedroom()->getImage($data->twoBedroomImage);
-    $apartment->getTwoBedroom()->getPrice($data->twoBedroomPrice);
-    
-    /* Create getThreeBedroom */
-    $apartment->getThreeBedroom()->setAvailable($data->threeBedroom);
-//    $apartment->getThreeBedroom()->getImage($data->threeBedroomImage);
-    $apartment->getThreeBedroom()->getPrice($data->threeBedroomPrice);
-    
-    /***************************************************************************
-     *   INSERT DATA INTO DATABASE
-     ***************************************************************************/
-    $sql = "INSERT INTO apartment(leaseTerm, pets, description)";
+
+    $sql = "INSERT INTO apartment(leaseTerm, pets)";
     $sql .= " VALUES('{$apartment->getLeaseTerm()}',";
-    $sql .= "'{$apartment->getPets()}', '{$apartment->getDescription()}')";
+    $sql .= "'{$apartment->getPets()}''";
     $result = mysqli_query($connection, $sql);
     confirm_query($sql);
-    /*$last_id = $connection->insert_id;*/
-    
-    if ($result) {
-        echo json_encode("success");
-    } else {
-        echo json_encode("failed");
-    }
-    
+
+
     $connection = null; //Closed connection
     
 }//END OF FUNCTION
@@ -127,8 +100,22 @@ function loginAdmin($admin)
 }//E O F
 
 
-/* Sign up function */
-function roomTypeInfo($data)
+function descriptionUpdate($data) //Update description
+{
+    global $connection;
+    $session_id = $_GET['apt_id'];
+    $description = $data->description;
+
+    $sql = "UPDATE apartment SET description='{$description}' WHERE apt_id='{$session_id}'";
+    $result = mysqli_query($connection, $sql);
+    confirm_query($result);
+
+    $connection = null;//Close connection
+
+}//E O F
+
+
+function roomTypeInfo($data) //Room type info
 {
     $id = $_GET['apt_id'];
     $pets = $data->pets;
@@ -141,7 +128,7 @@ function roomTypeInfo($data)
     
     $connection = null;
     
-}//END OF FUNCTION
+}//E O F
 
 /* Login function  */
 /**
@@ -158,7 +145,9 @@ try {
     } elseif ($data->createApartment == "roomType") {
         roomTypeInfo($data);
     } elseif ($data->createApartment == "create") {
-        createApartment($data);
+        createApartment($data, $apartment);
+    } elseif ($data->descriptionTitle == "description") {
+        descriptionUpdate($data);
     } elseif ($data->login == "login") {
         loginAdmin($data);
     } else {
