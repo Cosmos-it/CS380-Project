@@ -8,75 +8,73 @@ apartmentSearch.controller('CrudController',
         var current_user_id = SessionService.get('apt_id'); //Used to identify current user
 
         //............. Display Current user data ..............................
-        if (current_user_id != null) {
-            var data = {display: "display"};
-            $(function () { // Display user data if someone is logged in
-                $http.post("php_server/API/display.records.api.php?id=" + current_user_id, data)
-                    .success(function (response) {
-                        if (response != null) {
-                            $scope.apartName = response['username'];
-                            $scope.data = response['profileImage'];
-                            $scope.petsCheckBox = response['pets'];
-                            $scope.description = response['description'];
-                            $scope.leaseTerm = response['leaseTerm'];
-                            $scope.location = response['address'];
-                        }
-                    });
-            }); //E O F
 
-            //............. Display Current user data ..............................
-            var data = {display: "studio"};
-            $(function () { // Display user data if someone is logged in
-                $http.post("php_server/API/display.studio.php?id=" + current_user_id, data)
-                    .success(function (response) {
-                        if (response != null) {
-                            $scope.studioImage = response['image'];
-                            $scope.studioPrice = response['price'];
+        var data = {display: "display"};
+        $(function () { // Display user data if someone is logged in
+            $http.post("php_server/API/display.records.api.php?id=" + current_user_id, data)
+                .success(function (response) {
+                    if (response != null) {
+                        $scope.apartName = response['username'];
+                        $scope.data = response['profileImage'];
+                        $scope.petsCheckBox = response['pets'];
+                        $scope.description = response['description'];
+                        $scope.leaseTerm = response['leaseTerm'];
+                        $scope.location = response['address'];
+                    }
+                });
+        }); //E O F
+
+        //............. Display Current user data ..............................
+        var data = {display: "studio"};
+        $(function () { // Display user data if someone is logged in
+            $http.post("php_server/API/display.studio.php?id=" + current_user_id, data)
+                .success(function (response) {
+                    if (response != null) {
+                        $scope.studioImage = response['image'];
+                        $scope.studioPrice = response['price'];
 
 
-                        }
-                    });
-            }); //E O F
+                    }
+                });
+        }); //E O F
 
-            //............. Display Current user data ..............................
-            var data = {display: "one"};
-            $(function () { // Display user data if someone is logged in
-                $http.post("php_server/API/display.oneBed.php?id=" + current_user_id, data)
-                    .success(function (response) {
-                        if (response != null) {
-                            $scope.oneImage = response['image'];
-                            $scope.onePrice = response['price'];
-                        }
-                    });
-            }); //E O F
+        //............. Display Current user data ..............................
+        var data = {display: "one"};
+        $(function () { // Display user data if someone is logged in
+            $http.post("php_server/API/display.oneBed.php?id=" + current_user_id, data)
+                .success(function (response) {
+                    if (response != null) {
+                        $scope.oneImage = response['image'];
+                        $scope.onePrice = response['price'];
+                    }
+                });
+        }); //E O F
 
-            //............. Display Current user data ..............................
-            var data = {display: "two"};
-            $(function () { // Display user data if someone is logged in
-                $http.post("php_server/API/display.TwoBedroom.php?id=" + current_user_id, data)
-                    .success(function (response) {
-                        if (response != null) {
-                            $scope.twoImage = response['image'];
-                            $scope.twoPrice = response['price'];
+        //............. Display Current user data ..............................
+        var data = {display: "two"};
+        $(function () { // Display user data if someone is logged in
+            $http.post("php_server/API/display.TwoBedroom.php?id=" + current_user_id, data)
+                .success(function (response) {
+                    if (response != null) {
+                        $scope.twoImage = response['image'];
+                        $scope.twoPrice = response['price'];
 
-                        }
-                    });
-            }); //E O F
+                    }
+                });
+        }); //E O F
 
-            //............. Display Current user data ..............................
+        //............. Display Current user data ..............................
 
-            var data = {display: "three"};
-            $(function () { // Display user data if someone is logged in
-                $http.post("php_server/API/threeBedroom.php?id=" + current_user_id, data)
-                    .success(function (response) {
-                        if (response != null) {
-                            $scope.threeImage = response['image'];
-                            $scope.threePrice = response['price'];
-                        }
-                    });
-            }); //E O F
-
-        }
+        var data = {display: "three"};
+        $(function () { // Display user data if someone is logged in
+            $http.post("php_server/API/threeBedroom.php?id=" + current_user_id, data)
+                .success(function (response) {
+                    if (response != null) {
+                        $scope.threeImage = response['image'];
+                        $scope.threePrice = response['price'];
+                    }
+                });
+        }); //E O F
 
 
         /* errors array */
@@ -113,7 +111,7 @@ apartmentSearch.controller('CrudController',
         $scope.signUp = function () {  //sign up function
 
             var data = {
-                register: "register",
+                register: 'register',
                 name: $scope.apartmentName,
                 email: $scope.apartmentEmail,
                 password: $scope.apartmentPassword
@@ -129,7 +127,7 @@ apartmentSearch.controller('CrudController',
         if ($scope.loginPassword == undefined) $scope.loginPasswordError = errors.passwordError; //password error
         $scope.login = function () { //login function
             var data = {
-                login: "login",
+                login: 'login',
                 email: $scope.loginEmail,
                 password: $scope.loginPassword
             };
@@ -248,7 +246,7 @@ apartmentSearch.controller('CrudController',
                 description: description
             };
 
-            $http.post('php_server/API/createApartment.api.php?id=' + current_user_id,
+            $http.post('php_server/API/authentication.api.php?id=' + current_user_id,
                 data).success(function (response) {
                 console.log(response);
             });
@@ -268,7 +266,7 @@ apartmentSearch.controller('CrudController',
                 check: check
             };
 
-            $http.post('php_server/API/createApartment.api.php?id=' +
+            $http.post('php_server/API/authentication.api.php?id=' +
                 current_user_id, data).success(function (response) {
                 console.log("Test" + response);
 

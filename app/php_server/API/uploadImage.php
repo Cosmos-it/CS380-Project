@@ -19,24 +19,6 @@ $connection = $database->getConnection();
 
 $data = json_decode(file_get_contents("php://input"));
 
-try {
-    if ($image = $_FILES['file']) {
-        profileImage($connection);
-    } elseif ($image = $_FILES['studio']) {
-        studioImageUpload($connection);
-    } elseif ($image = $_FILES['oneImage']) {
-        oneBedImageUpload($connection);
-    } elseif ($image = $_FILES['twoImage']) {
-        twoImageUpload($connection);
-    } elseif ($image = $_FILES['threeImage']) {
-        threeImageUpload($connection);
-    } else {
-        echo "Not allowed here";
-    }
-
-} catch (Exception $e) {
- echo $e;
-}
 
 //Finished
 function studioImageUpload($connection)
@@ -257,3 +239,21 @@ function profileImage($connection)
 }
 
 
+try {
+    if ($image = $_FILES['file']) {
+        profileImage($connection);
+    } elseif ($image = $_FILES['studio']) {
+        studioImageUpload($connection);
+    } elseif ($image = $_FILES['oneImage']) {
+        oneBedImageUpload($connection);
+    } elseif ($image = $_FILES['twoImage']) {
+        twoImageUpload($connection);
+    } elseif ($image = $_FILES['threeImage']) {
+        threeImageUpload($connection);
+    } else {
+        echo "Not allowed here";
+    }
+
+} catch (Exception $e) {
+    echo $e;
+}

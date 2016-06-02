@@ -8,7 +8,7 @@ apartmentSearch.factory('Authentication', function ($http, $state, SessionServic
         login: function (data, $scope) {
             console.log(data.email + data.password);
             
-            var $promise = $http.post('php_server/API/test.php', data);
+            var $promise = $http.post('php_server/API/authentication.api.php', data);
             
             $promise.then(function (msg) {
                 var userId = msg.data; //msg.data is the way to use it.
@@ -27,7 +27,7 @@ apartmentSearch.factory('Authentication', function ($http, $state, SessionServic
         },
 
         signUp: function (data) {
-            var url_post = 'php_server/API/createApartment.api.php';
+            var url_post = 'php_server/API/authentication.api.php';
             //Test Apartment name, email, and password
             console.log("Apartment: " + data.name + " |Email: "
                 + data.email + " |Password: " + data.password);

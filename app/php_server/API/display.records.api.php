@@ -9,7 +9,6 @@
  *  IMPORT FILES
  *********************************/
 require_once("../Auto-Load.php");
-require_once("../classes/Preference.php");
 /*****************************************************
  * This API inserts data into the database
  *
@@ -31,37 +30,24 @@ $connection = $databaseInstance->getConnection();
 $data = json_decode(file_get_contents("php://input"));
 
 
-if ($data->display == "display") {
-    displayCurrentRecords();
-} else {
-    echo "Not allowed here";
-
-}
+displayCurrentRecords();
 
 
 function displayCurrentRecords()
 {
     global $connection;
     $current_user_id = $_GET[id];
-
+    
     $query = "SELECT username, profileImage, leaseTerm, pets, description, address FROM apartment " .
         "INNER JOIN Location ON (apartment.Apt_id = Location.APT_ID) " .
         "WHERE apartment.apt_id = '{$current_user_id}' LIMIT 1";
 
     $result = mysqli_query($connection, $query);
 
-//    $sql = "SELECT username, leaseTerm, pets, description, profileImage FROM apartment WHERE apt_id='{$current_user_id}'";
-//    $result = mysqli_query($connection, $sql);
-
-
     if (!$result) {
         die("Database query failed");
     }
-    //New data converted into array
-    $array_data = array();
-//    while ($row = mysqli_fetch_assoc($result)) {
-//        $array_data[] = $row;
-//    }
+
     $row = mysqli_fetch_assoc($result);
     echo json_encode($row);
 

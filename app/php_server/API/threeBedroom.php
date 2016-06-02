@@ -10,7 +10,6 @@
  *  IMPORT FILES
  *********************************/
 require_once("../Auto-Load.php");
-require_once("../classes/Preference.php");
 /*****************************************************
  * This API inserts data into the database
  *
@@ -54,6 +53,5 @@ function displayThreeBedroom()
     //New data converted into array
     $row = mysqli_fetch_assoc($result);
     echo json_encode($row);
-
 
 }
