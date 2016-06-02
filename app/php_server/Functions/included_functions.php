@@ -27,6 +27,15 @@ function mysql_prep($string)
     return $result;
 }
 
+/**
+ * function from (Includes_PHP) Checks
+ * if the connection has not failed.
+ * Use returned data (if any)
+ *
+ * @param $result_set
+ */
+
+
 function confirm_query($result_set)
 {
     global $connection;
@@ -34,6 +43,13 @@ function confirm_query($result_set)
         die("Database query failed." . mysqli_errno($connection));
     }
 }
+
+/*
+Call this method when a message needs to be encoded or decoded
+    once it reaches the user on the other side of the client.
+    All incoming and out going messages should be encoded using the
+    base64_decode()
+*/
 
 function encode_message($stringText)
 {
@@ -57,10 +73,7 @@ function decode_message($stringText)
 function displayData()
 {
     global $connection;
-    $sql = "SELECT * FROM apartment INNER JOIN location ON apartment.Apt_id = location.Apt_id" .
-        "INNER JOIN Studio ON apartment.Apt_id = Studio._id   INNER JOIN OneBedroom ON apartment.Apt_id" .
-        "= OneBedroom._id INNER JOIN TwoBedroom ON apartment.Apt_id = TwoBedroom._id" .
-        "INNER JOIN ThreeBedroom ON apartment.Apt_id = ThreeBedroom._id WHERE ";
+    $sql = "SELECT * FROM apartment INNER JOIN location ON apartment.apt_id = location.apt_id INNER JOIN Studio ON apartment.apt_id = Studio._id   INNER JOIN OneBedroom ON apartment.apt_id = OneBedroom._id INNER JOIN TwoBedroom ON apartment.apt_id = TwoBedroom._id INNER JOIN ThreeBedroom ON apartment.apt_id = ThreeBedroom._id";
 
     //Performing mysql query
     $result = mysqli_query($connection, $sql);
@@ -76,4 +89,8 @@ function displayData()
     return $array_data;
 
 }
+
+
+
+
 

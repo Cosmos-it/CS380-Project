@@ -1,10 +1,13 @@
 <?php
-/**********************
- * Created by Taban Cosmos.
+/**
+ * Created by PhpStorm.
  * User: Taban
- * Date: 9/21/15
- * Time: 9:03 PM
- ****************************/
+ * Date: 6/1/16
+ * Time: 4:38 PM
+ */
+
+
+
 /**************************
  *  IMPORT FILES
  *********************************/
@@ -27,48 +30,32 @@ $databaseInstance = LocalDatabase::getInstance();
 $connection = $databaseInstance->getConnection();
 
 
+
 /************** Data from the front-end ******************/
 $data = json_decode(file_get_contents("php://input"));
 
-
-if ($data->display == "display") {
-    displayCurrentRecords();
+if ($data->display == "one") {
+    displayOneBedroom();
 } else {
     echo "Issues";
 }
 
-
-function displayCurrentRecords()
+//Display Studio
+function displayOneBedroom($variable)
 {
     global $connection;
-    $current_user_id = $_GET[id];
+    $current_user_id = $_GET['id'];
 
-    $query = "SELECT username, profileImage, leaseTerm, pets, description, address FROM apartment " .
-        "INNER JOIN Location ON (apartment.Apt_id = Location.APT_ID) " .
-        "WHERE apartment.apt_id = '{$current_user_id}' LIMIT 1";
-
-    $result = mysqli_query($connection, $query);
-
-//    $sql = "SELECT username, leaseTerm, pets, description, profileImage FROM apartment WHERE apt_id='{$current_user_id}'";
-//    $result = mysqli_query($connection, $sql);
-
-
+    $sql = "SELECT available, price, image  FROM OneBedroom WHERE APT_ID = {$current_user_id}";
+    //Performing mysql query
+    $result = mysqli_query($connection, $sql);
     if (!$result) {
         die("Database query failed");
     }
-    //New data converted into array
-    $array_data = array();
-//    while ($row = mysqli_fetch_assoc($result)) {
-//        $array_data[] = $row;
-//    }
+
     $row = mysqli_fetch_assoc($result);
     echo json_encode($row);
 
+
 }
-
-
-
-
-
-
 

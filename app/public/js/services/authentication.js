@@ -42,20 +42,6 @@ apartmentSearch.factory('Authentication', function ($http, $state, SessionServic
 
         },
 
-        submitIfo: function (data) {
-            //Test
-            console.log("LeaseTerm " + data.leaseTerm +
-                " Pets: " + data.pets + " Location: " + data.location + " Description:");
-
-            $http.post("php_server/API/createApartment.api.php", data)
-                .success(function (response) {
-                    console.log("Test" + response);
-                }).error(function (error) {
-                //Catch server errors
-
-            });
-        },
-
         logout: function () {
             SessionService.destroy(); //destroy session
             $http.post('php_server/API/destroy_session.php'); //post that the API

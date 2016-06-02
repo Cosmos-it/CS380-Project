@@ -15,7 +15,7 @@ apartmentSearch.config(['$stateProvider', '$urlRouterProvider',
             .state('/display-data', {
                 url: '/display',
                 templateUrl: 'views/display-data.html',
-                controller: 'CrudController'
+                controller: 'DisplayAllData'
             })
 
             .state('/detail-data', {

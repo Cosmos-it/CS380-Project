@@ -3,10 +3,8 @@
  */
 
 
-apartmentSearch.controller('DisplayData',
+apartmentSearch.controller('DisplayAllData',
     function ($scope, $http, $state, Authentication, SessionService) {
-
-        var key_id = SessionService.get('apt_id'); //key for logged in use
 
         //.................................
         $(function () { //Display apartment data for specific user
@@ -16,7 +14,7 @@ apartmentSearch.controller('DisplayData',
                 pets: ""
             };
 
-            $http.post("php_server/API/displaySearchedData.api.php", data)
+            $http.post("php_server/API/display.records.api.php", data)
                 .success(function (response) {
                     console.log(response);
                 });
