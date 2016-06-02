@@ -12,3 +12,8 @@ input .ng-valid.ng-touched {
 button .ng-invalid {
     background-color: gray;
 }
+
+.validationSuccess {
+    color: #009900;
+    text-align: center;
+}

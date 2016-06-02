@@ -36,11 +36,9 @@ displayCurrentRecords();
 function displayCurrentRecords()
 {
     global $connection;
-    $current_user_id = $_GET[id];
-    
-    $query = "SELECT username, profileImage, leaseTerm, pets, description, address FROM apartment " .
-        "INNER JOIN Location ON (apartment.Apt_id = Location.APT_ID) " .
-        "WHERE apartment.apt_id = '{$current_user_id}' LIMIT 1";
+    $current_user_id = $_GET['id'];
+
+    $query = "SELECT * FROM apartment WHERE apartment.apt_id = '{$current_user_id}'";
 
     $result = mysqli_query($connection, $query);
 

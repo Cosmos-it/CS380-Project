@@ -80,9 +80,9 @@ function signUp($data)
     $result = mysqli_query($connection, $sql);
 
     if ($result) {
-        echo "success";
+        echo json_encode("success");
     } else {
-        echo "User name exists";
+        echo json_encode("fail");
     }
 
 
@@ -151,11 +151,8 @@ try {
     } elseif ($data->type == "update") {
         submitInfo($data);
 
-    } elseif ($data->createApartment == "create") {
-        submitInfo($data);
-
     } elseif ($data->title == "description") {
-        descriptionUpdate($data, $connection);
+        descriptionUpdate($data);
 
     } else {
         echo "<div style='color:red;'><h1 style='text-align: center; margin-top: 50px;'>STOP IT!<br>

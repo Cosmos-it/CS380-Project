@@ -1,6 +1,10 @@
 <section class="row main large-8">
     <div class="column">
-
+        <div class="top-bar-left">
+            <h6>Profile</h6>
+        <div class="top-bar-right">
+            <h6><a href="#/dashBoard">Go Edit</a></h6>
+        </div>
     </div>
 
 
@@ -9,14 +13,14 @@
         <div class="medium-4 columns">
             <div class="copy-card">
                 <div class="image">
-                    <img src="public/img/users_profile_images/room-images/recortada-Puro-Hotel-Puro-Hotel-Palma-Doble-standar-350x350.jpg">
-                    <span class="title"><h4>The Grove</h4></span>
+                    <img ng-src="php_Server/API/{{data}}">
+                    <span class="title"><h4>{{}}</h4></span>
                 </div>
                 <div class="content" style="padding: 10px;">
                     <div class="apartment-data">
-                        <h6>Lease term: 12month</h6>
+                        <h6>Lease term: {{leaseTerm}}</h6>
                         <h6>Pets: Allowed</h6>
-                        <h6>Ellensburg WA</h6>
+                        <h6>{{location}}</h6>
                         <h6>Phone: 509-XXX-XXXX</h6>
 
                     </div><!-- The values for this will be read from the database--->
@@ -31,13 +35,7 @@
                 <hr/>
                 <div class="preference">
                     <p>
-                        Non nulla arbitror probant, si elit ingeniis ingeniis. Mandaremus summis lorem
-                        doctrina fore. Id laborum distinguantur eu offendit ita velit de noster ubi
-                        doctrina est eu ipsum mentitum laboris est quo e legam occaecat do ab fore
-                        varias eu pariatur e deserunt nisi iudicem, irure quo possumus. De singulis iis
-                        mentitum, incididunt sunt commodo deserunt a doctrina o aute commodo ita se sunt
-                        culpa nam arbitror. Ubi a noster esse illum. Nulla id singulis, ne si
-                        cohaerescant. Ea eu quorum singulis, elit et arbitror ex eram.</p>
+                        {{description}}</p>
                 </div>
             </section>
         </section>
@@ -51,38 +49,34 @@
                 <div class="column">
                     <h6>Studio</h6>
                     <!-- display data here. -->
-                    <p>Available</p>
-                    <P>$750.00</P>
-                    <img class="thumbnail"
-                         src="public/img/users_profile_images/room-images/recortada-Puro-Hotel-Puro-Hotel-Palma-Doble-standar-350x350.jpg">
+                    <p>Not Available</p>
+                    <P>${{studioPrice}}</P>
+                    <img ng-src="php_Server/API/{{studioImage}}">
                 </div>
 
                 <div class="column">
                     <h6>One Bedroom</h6>
                     <!-- Display data here -->
                     <p>Available</p>
-                    <P>$750.00</P>
+                    <P>${{onePrice}}</P>
 
-                    <img class="thumbnail"
-                         src="public/img/users_profile_images/room-images/living-room.jpeg">
+                    <img ng-src="php_Server/API/{{oneImage}}">
                 </div>
                 <div class="column">
                     <h6>Two Bedroom</h6>
                     <!-- Display data here -->
                     <p>Available</p>
-                    <P>$800.00</P>
+                    <P>${{twoPrice}}</P>
 
-                    <img class="thumbnail"
-                         src="public/img/users_profile_images/room-images/living-room.jpeg">
+                    <img ng-src="php_Server/API/{{twoImage}}">
                 </div>
 
                 <div class="column">
                     <h6>Three Bedroom</h6>
                     <!-- Display data here-->
                     <p>Available</p>
-                    <P>$970.00</P>
-                    <img class="thumbnail"
-                         src="public/img/users_profile_images/room-images/living-room.jpeg">
+                    <P>${{threePrice}}</P>
+                    <img ng-src="php_Server/API/{{threeImage}}">
                 </div>
             </div>
         </section>

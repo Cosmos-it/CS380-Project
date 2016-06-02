@@ -7,7 +7,7 @@
  */
 
 
-session_id('user');
+session_id('apt_id');
 session_start();
 session_destroy();
 session_commit();

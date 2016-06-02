@@ -9,8 +9,8 @@ apartmentSearch.controller('CrudController',
 
         //............. Display Current user data ..............................
 
-        var data = {display: "display"};
         $(function () { // Display user data if someone is logged in
+            var data = {display: "display"};
             $http.post("php_server/API/display.records.api.php?id=" + current_user_id, data)
                 .success(function (response) {
                     if (response != null) {
@@ -24,9 +24,20 @@ apartmentSearch.controller('CrudController',
                 });
         }); //E O F
 
-        //............. Display Current user data ..............................
-        var data = {display: "studio"};
         $(function () { // Display user data if someone is logged in
+            var data = {display: "location"};
+            $http.post("php_server/API/displayLocation.api.php?id=" + current_user_id, data)
+                .success(function (response) {
+                    if (response != null) {
+                        $scope.location = response['address'];
+                    }
+                });
+        }); //E O F
+
+
+        //............. Display Current user data ..............................
+        $(function () { // Display user data if someone is logged in
+            var data = {display: "studio"};
             $http.post("php_server/API/display.studio.php?id=" + current_user_id, data)
                 .success(function (response) {
                     if (response != null) {
@@ -37,6 +48,21 @@ apartmentSearch.controller('CrudController',
                     }
                 });
         }); //E O F
+
+        $(function () { //Display apartment data for specific user
+            $http.post("php_server/API/display.all.records.php")
+                .success(function (response) {
+                    $scope.apartName = response['username'];
+                    $scope.data = response['profileImage'];
+                    $scope.petsCheckBox = response['pets'];
+                    $scope.description = response['description'];
+                    $scope.leaseTerm = response['leaseTerm'];
+                    $scope.location = response['address'];
+                    $scope.studioImage = response['image'];
+                    $scope.studioPrice = response['price'];
+                });
+        });
+
 
         //............. Display Current user data ..............................
         var data = {display: "one"};
@@ -87,22 +113,25 @@ apartmentSearch.controller('CrudController',
             passwordError: "Valid password required",
         };
 
-//.....................................................................
-        $scope.submitInfo = function () {  //Submit
+
+//...................................................................
+        $scope.updateApart = function () {
+            var leaseTerm = document.getElementById('leaseTerm').value;
+            var location = document.getElementById('location').value;
+            var check = $scope.petsCheckBox;
             var data = {
-                createApartment: "create",
-                leaseTerm: $scope.leaseTerm,
-                pets: $scope.petsCheckBox
+                type: "update",
+                leaseTerm: leaseTerm,
+                location: location,
+                check: check
             };
 
-            $http.post("php_server/API/createApartment.api.php?id=" + current_user_id, data)
-                .success(function (response) {
-                    console.log("Test: " + response);
-                }).error(function (error) {
-                //Catch server errors
-            });
+            $http.post('php_server/API/authentication.api.php?id=' +
+                current_user_id, data).success(function (response) {
+                console.log("Test" + response);
 
-        };//End of submit info function
+            });
+        }
 
 //.................................................................................
         if ($scope.apartmentName == undefined) $scope.apartmentNameError = errors.nameError;
@@ -117,7 +146,9 @@ apartmentSearch.controller('CrudController',
                 password: $scope.apartmentPassword
             };
             //Call Authentication
-            Authentication.signUp(data);
+            Authentication.signUp(data, $scope);
+
+            $scope.adminForm = '';
 
 
         };//End of sign up function
@@ -132,12 +163,18 @@ apartmentSearch.controller('CrudController',
                 password: $scope.loginPassword
             };
 
-            console.log("What");
             //Use this authentication to login.
             Authentication.login(data, $scope);
 
+            $scope.loginForm.prestine = '';
+
         };//End of login function
 
+        $scope.logout = function () { //login function
+            //Use this authentication to login.
+            Authentication.logout();
+
+        };//End of login function
 
 //...................................................................
         $scope.uploadResult = [];
@@ -252,26 +289,6 @@ apartmentSearch.controller('CrudController',
             });
         };
 
-
-//......................................................
-        $scope.updateApart = function () {
-            var leaseTerm = document.getElementById('leaseTerm').value;
-            var location = document.getElementById('location').value;
-            var check = $scope.petsCheckBox;
-
-            var data = {
-                type: "update",
-                leaseTerm: leaseTerm,
-                location: location,
-                check: check
-            };
-
-            $http.post('php_server/API/authentication.api.php?id=' +
-                current_user_id, data).success(function (response) {
-                console.log("Test" + response);
-
-            });
-        }
 
     });
 

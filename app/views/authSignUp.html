@@ -16,6 +16,10 @@
                 <form style="border: 1px solid #D8D8D8; padding: 10px; margin-bottom: 10px; margin-top:10px;"
                       class=" userForm" name="adminForm" ng-submit="signUp()" novalidate>
                     <h5>Sign Up</h5>
+                    <p class=" validationError" ng-show="successError">
+                        {{sigUpError}}</p>
+                    <p class="validationSuccess" ng-show="success">
+                        {{signSuccess}}</p>
                     <div class="registration medium-12 large-12 medium-centered ">
                         <input type="text" name="apartmentName" ng-model="apartmentName" placeholder="apartment name"
                                ng-required="true">
@@ -44,6 +48,8 @@
                 <form style="border: 1px solid #D8D8D8; padding: 10px; margin-bottom: 10px; margin-top:10px;"
                       name="loginForm" ng-submit="login()" novalidate>
                     <h5>Login</h5>
+                    <p class="validationError" ng-show="[{if fail}]">
+                        {{loginSuccess}}</p>
                     <div class="registration medium-12 large-12 medium-centered">
                         <input type="email" name="loginEmail" ng-model="loginEmail" placeholder="Email"
                                ng-required="true">
