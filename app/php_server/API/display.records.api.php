@@ -34,7 +34,8 @@ $data = json_decode(file_get_contents("php://input"));
 if ($data->display == "display") {
     displayCurrentRecords();
 } else {
-    echo "Issues";
+    echo "Not allowed here";
+
 }
 
 

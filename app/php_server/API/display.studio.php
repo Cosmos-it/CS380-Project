@@ -28,7 +28,6 @@ $databaseInstance = LocalDatabase::getInstance();
 $connection = $databaseInstance->getConnection();
 
 
-
 /************** Data from the front-end ******************/
 $data = json_decode(file_get_contents("php://input"));
 
@@ -36,14 +35,15 @@ $data = json_decode(file_get_contents("php://input"));
 if ($data->display == "studio") {
     displayStudio();
 } else {
-    echo "Issues";
+    echo "Not allowed here";
+
 }
 
 //Display Studio
 function displayStudio()
 {
     global $connection;
-    $current_user_id= $_GET['id'];
+    $current_user_id = $_GET['id'];
     
     $sql = "SELECT available, price, image  FROM Studio WHERE APT_ID = {$current_user_id}";
     //Performing mysql query

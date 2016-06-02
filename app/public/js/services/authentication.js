@@ -6,7 +6,10 @@ apartmentSearch.factory('Authentication', function ($http, $state, SessionServic
 
     return {
         login: function (data, $scope) {
-            var $promise = $http.post('php_server/API/createApartment.api.php', data);
+            console.log(data.email + data.password);
+            
+            var $promise = $http.post('php_server/API/test.php', data);
+            
             $promise.then(function (msg) {
                 var userId = msg.data; //msg.data is the way to use it.
                 console.log(userId);

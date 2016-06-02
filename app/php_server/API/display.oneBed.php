@@ -37,8 +37,8 @@ $data = json_decode(file_get_contents("php://input"));
 if ($data->display == "one") {
     displayOneBedroom();
 } else {
-    echo "Issues";
-}
+    echo "<div style='color:red;'><h1 style='text-align: center; margin-top: 50px;'>STOP IT!<br>
+              <span style='font-size: 70px;'>&#x1f620;</span><br>You have no permission.</h1></div>";}
 
 //Display Studio
 function displayOneBedroom($variable)

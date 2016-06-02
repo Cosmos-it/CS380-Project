@@ -31,10 +31,8 @@ try {
     } elseif ($image = $_FILES['threeImage']) {
         threeImageUpload($connection);
     } else {
-        echo "<div style='color:red;'><h1 style='text-align: center; margin-top: 50px;'>STOP IT!<br>
-              <span style='font-size: 70px;'>&#x1f620;</span><br>You have no permission.</h1></div>";
+        echo "Not allowed here";
     }
-
 
 } catch (Exception $e) {
  echo $e;

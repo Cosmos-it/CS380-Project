@@ -1,7 +1,7 @@
 /**
  * Created by Taban on 5/5/16.
  */
-
+// (function () {
 apartmentSearch.controller('CrudController',
     function ($scope, $http, $state, $timeout, $upload, Authentication, SessionService) {
 
@@ -23,7 +23,6 @@ apartmentSearch.controller('CrudController',
                         }
                     });
             }); //E O F
-
 
             //............. Display Current user data ..............................
             var data = {display: "studio"};
@@ -135,6 +134,7 @@ apartmentSearch.controller('CrudController',
                 password: $scope.loginPassword
             };
 
+            console.log("What");
             //Use this authentication to login.
             Authentication.login(data, $scope);
 
@@ -275,5 +275,7 @@ apartmentSearch.controller('CrudController',
             });
         }
 
-    })
-;
+    });
+
+// })(apartmentSearch);
+

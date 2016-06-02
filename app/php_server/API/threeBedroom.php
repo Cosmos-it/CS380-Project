@@ -36,7 +36,7 @@ $data = json_decode(file_get_contents("php://input"));
 if ($data->display == "three") {
     displayThreeBedroom();
 } else {
-    echo "Issues";
+    echo "Not allowed here";
 }
 
 //Display Studio

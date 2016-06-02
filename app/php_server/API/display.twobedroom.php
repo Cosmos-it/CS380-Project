@@ -36,8 +36,8 @@ $current_user_id = $_GET['id'];
 if ($data->display == "two") {
     displayTwoBedroom($current_user_id);
 } else {
-    echo "Issues";
-}
+    echo "<div style='color:red;'><h1 style='text-align: center; margin-top: 50px;'>STOP IT!<br>
+              <span style='font-size: 70px;'>&#x1f620;</span><br>You have no permission.</h1></div>";}
 
 
 //Display Studio
