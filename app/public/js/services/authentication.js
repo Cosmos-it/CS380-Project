@@ -7,10 +7,8 @@ apartmentSearch.factory('Authentication', function ($http, $state, SessionServic
     return {
         login: function (data, $scope) {
             var $promise = $http.post('php_server/API/authentication.api.php', data);
-
             $promise.then(function (msg) {
                 var userId = msg.data; //msg.data is the way to use it.
-                console.log(userId);
                 if (userId != "fail") {
                     SessionService.set('apt_id', userId);
                     $state.go('/admin-dash');
@@ -28,7 +26,6 @@ apartmentSearch.factory('Authentication', function ($http, $state, SessionServic
             var url_post = 'php_server/API/authentication.api.php';
             $http.post(url_post, data).success(function (response) {
                 //If success, send the admin to the admin dash to update info
-                console.log(response);
                 var check = 'success';
                 if (response === check) {
                     $scope.success = true;

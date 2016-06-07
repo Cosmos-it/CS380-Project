@@ -43,8 +43,6 @@ apartmentSearch.controller('CrudController',
                     if (response != null) {
                         $scope.studioImage = response['image'];
                         $scope.studioPrice = response['price'];
-
-
                     }
                 });
         }); //E O F
@@ -52,14 +50,16 @@ apartmentSearch.controller('CrudController',
         $(function () { //Display apartment data for specific user
             $http.post("php_server/API/display.all.records.php")
                 .success(function (response) {
-                    $scope.apartName = response['username'];
-                    $scope.data = response['profileImage'];
-                    $scope.petsCheckBox = response['pets'];
-                    $scope.description = response['description'];
-                    $scope.leaseTerm = response['leaseTerm'];
-                    $scope.location = response['address'];
-                    $scope.studioImage = response['image'];
-                    $scope.studioPrice = response['price'];
+
+                    // console.log(response);
+                    // $scope.name = response['username'];
+                    // $scope.data = response['profileImage'];
+                    // $scope.petsCheckBox = response['pets'];
+                    // $scope.description = response['description'];
+                    // $scope.leaseTerm = response['leaseTerm'];
+                    // $scope.location = response['address'];
+                    // $scope.studioImage = response['image'];
+                    // $scope.studioPrice = response['price'];
                 });
         });
 
@@ -288,8 +288,7 @@ apartmentSearch.controller('CrudController',
                 console.log(response);
             });
         };
-
-
+        
     });
 
 // })(apartmentSearch);

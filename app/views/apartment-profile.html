@@ -14,14 +14,15 @@
             <div class="copy-card">
                 <div class="image">
                     <img ng-src="php_Server/API/{{data}}">
-                    <span class="title"><h4>{{}}</h4></span>
+                    <!--<span class="title"><h4>{{apartName}}</h4></span>-->
                 </div>
                 <div class="content" style="padding: 10px;">
                     <div class="apartment-data">
-                        <h6>Lease term: {{leaseTerm}}</h6>
-                        <h6>Pets: Allowed</h6>
-                        <h6>{{location}}</h6>
-                        <h6>Phone: 509-XXX-XXXX</h6>
+                        <h6>{{apartName}}</h6>
+                        <p>Lease term: {{leaseTerm}}</p>
+                        <p>Pets: Allowed</p>
+                        <p>Location: {{location}}</p>
+                        <p>Phone: 509-XXX-XXXX</p>
 
                     </div><!-- The values for this will be read from the database--->
                 </div>

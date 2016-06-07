@@ -38,7 +38,7 @@ function displayCurrentRecords()
     global $connection;
     $current_user_id = $_GET['id'];
 
-    $query = "SELECT * FROM apartment WHERE apartment.apt_id = '{$current_user_id}'";
+    $query = "SELECT username, profileImage, leaseTerm, pets, description FROM apartment WHERE apartment.apt_id = '{$current_user_id}'";
 
     $result = mysqli_query($connection, $query);
 

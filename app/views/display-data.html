@@ -17,7 +17,10 @@
             <select>
                 <option value="all">All Price</option>
                 <option value="400">Below $400</option>
-                <option value="500">Below $500</option>
+                <option value="500">Below $800</option>
+                <option value="500">Below $1300</option>
+                <option value="500">Below $1500</option>
+                <option value="500">Below $2000</option>
             </select>
         </div>
         <div class="small-4 columns">
@@ -85,16 +88,18 @@
         <div class="medium-4 columns">
             <div class="card">
                 <div class="image">
-                    <img src="public/img/users_profile_images/apartment-1.jpg">
+                    <img ng-src="{{profileImage}}">
                     <span class="title">{{apartName}}</span>
                 </div>
                 <div class="content">
                     <p>Call: 509-XXX-XXXX</p>
-                    <p>Price: $500</p>
-                    <p>Lease term: 1 years</p>
+                    <p>Price: ${{onePrice}}</p>
+                    <p>Lease term:{{leaseTerm}} </p>
+                    <p>Location:{{location}} </p>
+
                 </div>
                 <div class="action">
-                    <a href='#'>More</a>
+                    <a href='#/profile'>More</a>
                 </div>
             </div>
         </div>

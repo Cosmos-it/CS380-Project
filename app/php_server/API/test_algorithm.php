@@ -23,19 +23,15 @@ $connection = $database->getConnection();
 /************** Data from the front-end ******************/
 //$data = json_decode(file_get_contents("php://input"));
 
-try {
-    sortDataWhenDisplaying();
 
-} catch (Exception $e) {
-    echo $e;
-}
+sortDataWhenDisplaying();
 
 function sortDataWhenDisplaying()
 {
     //Create an object
     $apart1 = new ApartmentV2();
     $apart1->setAptName("The Groove");
-    $apart1->setLocation("Ellensburg");
+    $apart1->setAddress("Ellensburg");
     $apart1->setLeaseTerm(3);
     $apart1->setPrice(850.00);
     $apart1->setNumBedrooms(2);
@@ -44,7 +40,7 @@ function sortDataWhenDisplaying()
     //Create another object
     $apart2 = new ApartmentV2();
     $apart2->setAptName("Juniper Ave.");
-    $apart2->setLocation("Ellensburg");
+    $apart2->setAddress("Ellensburg");
     $apart2->setLeaseTerm(2);
     $apart2->setPrice(925.00);
     $apart2->setNumBedrooms(3);
@@ -53,7 +49,7 @@ function sortDataWhenDisplaying()
     //Create another object
     $apart3 = new ApartmentV2();
     $apart3->setAptName("Water St.");
-    $apart3->setLocation("Ellensburg");
+    $apart3->setAddress("Ellensburg");
     $apart3->setLeaseTerm(4);
     $apart3->setPrice(550.00);
     $apart3->setNumBedrooms(2);
@@ -62,7 +58,7 @@ function sortDataWhenDisplaying()
     /* Create another object*/
     $apart4 = new ApartmentV2();
     $apart4->setAptName("Timothy Park");
-    $apart4->setLocation("Ellesnburg");
+    $apart4->setAddress("Ellesnburg");
     $apart4->setLeaseTerm(5);
     $apart4->setPrice(725.00);
     $apart4->setNumBedrooms(4);
@@ -71,7 +67,7 @@ function sortDataWhenDisplaying()
     /* Create another object*/
     $apart5 = new ApartmentV2();
     $apart5->setAptName("The Groove");
-    $apart5->setLocation("Ellensburg");
+    $apart5->setAddress("Ellensburg");
     $apart5->setLeaseTerm(2);
     $apart5->setPrice(320.00);
     $apart5->setNumBedrooms(3);
@@ -82,7 +78,7 @@ function sortDataWhenDisplaying()
     
     /* Set Values*/
     $apart6->setAptName("Water St.");
-    $apart6->setLocation("Ellensburg");
+    $apart6->setAddress("Ellensburg");
     $apart6->setLeaseTerm(2);
     $apart6->setPrice(575.00);
     $apart6->setNumBedrooms(4);
@@ -94,7 +90,7 @@ function sortDataWhenDisplaying()
     /* Set Values*/
     
     $apart7->setAptName("The Groove");
-    $apart7->setLocation("Ellensburg");
+    $apart7->setAddress("Ellensburg");
     $apart7->setLeaseTerm(8);
     $apart7->setPrice(300.00);
     $apart7->setNumBedrooms(2);
@@ -110,7 +106,7 @@ function sortDataWhenDisplaying()
     /* Set Values */
     
     $apart8->setAptName("Timothy Park");
-    $apart8->setLocation("Ellensburg");
+    $apart8->setAddress("Ellensburg");
     $apart8->setLeaseTerm(7);
     $apart8->setPrice(650.00);
     $apart8->setNumBedrooms(4);

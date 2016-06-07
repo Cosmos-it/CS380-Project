@@ -34,7 +34,7 @@ $data = json_decode(file_get_contents("php://input"));
 function returnData()
 {
     global $connection;
-    $sql = "SELECT * FROM apartment INNER JOIN location ON apartment.apt_id = location.APT_ID
+    $sql = "SELECT * FROM apartment LEFT JOIN location ON apartment.apt_id = location.APT_ID
   INNER JOIN Studio ON apartment.apt_id = Studio.APT_ID
   INNER JOIN OneBedroom ON apartment.apt_id = OneBedroom.APT_ID
   INNER JOIN TwoBedroom ON apartment.apt_id = TwoBedroom.APT_ID
@@ -51,7 +51,7 @@ function returnData()
     }
 //encode the data into array.
     $json = json_encode($array_data);
-    echo json_encode($json);
+    echo $json;
 }
 
 
