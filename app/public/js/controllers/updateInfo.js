@@ -17,7 +17,6 @@ apartmentSearch.controller('updateInfoCtrl',
             passwordError: "Valid password required"
         };
 
-
         //.............................................................
         $scope.updateApart = function () {
             var leaseTerm = document.getElementById('leaseTerm').value;

@@ -1,65 +1,203 @@
 <!-- Apartment edits -->
 <section class="main row large-8" ng-controller="CrudController">
-
-    <section class="column" style="padding: 5px;">
-        <div class="top-bar-left" style="margin-right: 20px;">
-            <ul class="menu">
-                <li>Apt Name here</li>
-                <!--  This data here changes ( USER CAN HAVE ROOM OR NOT HAVE A ROOM )-->
-            </ul>
+    <div class="column">
+        <div class="top-bar-left">
+            <h6><a href="#/profile">View profile</a></h6>
         </div>
         <div class="top-bar-right">
-            <ul class="menu">
-                <li><a href="#inbox.html">Save</a> <!--- (ALLOWS USER TO SEND MESSAGE TO ANOTHER USER --->
-            </ul>
+            <h6><a ng-click="logout()">Log out</a></h6>
         </div>
-    </section>
+    </div>
 
-    <hr>
-    <!--/Section inputs/-->
-    <section class="column " id="panel2">
-        <section class="large-3 columns">
-            <div>
-                <img class="thumbnail"
-                     src="public/img/users_profile_images/room-images/recortada-Puro-Hotel-Puro-Hotel-Palma-Doble-standar-350x350.jpg">
+    <section class="column" style="padding: 5px;">
+        <hr>
+        <!--/Section inputs/-->
+        <div class="column large-4" id="panel2">
+            <div class="copy-card">
+                <div style="padding: 10px;">
+                    <div class="image" style="margin-bottom: 10px;">
+                        <img ng-src="php_Server/API/{{data}}">
+                    </div>
+
+                    <input type="file" id="file" name="file"
+                           accept="image/*">
+                    <button style="width: 50px; height: 20px; padding: 2px; border-radius: 2px;"
+                            class="button" ng-click="upLoadImage()">Upload
+                    </button>
+                    <input type="text" name="apartName" ng-model="apartName"
+                           placeholder="Apartment name">
+                </div>
+
+                <div style="margin-top: 10px; padding: 10px;">
+                    <p>Pets allowed?</p>
+                    <div class="switch tiny">
+                        <input class="switch-input" id="pets" type="checkbox" name="petsCheckBox"
+                               ng-model="petsCheckBox">
+                        <label class="switch-paddle" for="pets">
+                            <span class="show-for-sr">Three Bedroom available?</span>
+                            <span class="switch-active" aria-hidden="true">Yes</span>
+                            <span class="switch-inactive" aria-hidden="true">No</span>
+                        </label>
+                    </div>
+                    <input type="text" id="leaseTerm" name="leaseTerm" ng-model="leaseTerm"
+                           placeholder="Lease Term: 1 (for 1 month)" ng-required="true">
+                    <input type="text" id="location" name="location" ng-model="location"
+                           placeholder="Location" ng-required="true">
+                    <button class="button" type="submit" ng-click="updateApart()">Submit</button>
+                </div>
             </div>
-
-            <div class="apartment-data">
-                <form class="preapartment-data">
-
-                    <input type="text" id="Apartment_name" ng-model="Apartment_name" placeholder="Apartment name">
-                    <input type="number" id="Number_of_Rooms" ng-model="Number_of_Rooms" placeholder="Number of Rooms">
-                    <input type="number" id="Number_of_Bathrooms" ng-model="Number_of_Bathrooms"
-                           placeholder="Number of Bathrooms">
-                    <input type="number" id="Lease_term" ng-model="Lease_term" placeholder="Lease term">
-                    <input type="number" id="Lease_price" ng-model="Lease_price" placeholder="Lease price">
-                    <input type="text" id="Location" ng-model="Location" placeholder="Location ">
-                    <button type="submit"><i class="fa fa-chevron-circle-right"></i></u></button>
-                </form>
-            </div>
-        </section>
+        </div>
 
         <!--End section inputs-->
 
-        <!--Upload image-->
-        <section class="large-9 column">
-            <textarea type="text" id="Apartment Description" placeholder="Apartment Description"></textarea>
+        <!-- Description works -->
+        <form class="large-8 column" name="Description" ng-submit="saveDescription()">
+            <div class="main">
+                <h5>Your premises and Neighborhood</h5>
+                <textarea type="text" style="height: 100px;" name="description" id="Apartment Description"
+                          ng-model="description"
+                          placeholder="Apartment Description" ng-required="true"></textarea>
+                <br>
+                <button type="submit" ng-disabled="Description.$invalid"
+                        style="width: 50px; height: 20px; padding: 2px; border-radius: 2px;" class="button ">Save
+                </button>
+            </div>
+        </form>
+
+        <!-- GIVE IT A FUNCTION TO CREATE AND UPDATE THE ROOM TYPE SECTION -->
+        <form class="large-8 column">
+
+            <h5>Rooms Type</h5>
+
+            <!--************************ STUDIO *************************-->
+            <section class="main">
+                <div>
+                    <div class="image" style="margin-bottom: 10px;">
+                        <img ng-src="php_Server/API/{{studioImage}}"> <!-- IMAGE DISPLAY-->
+
+                    </div>
+                    <div>
+                        <!-- INPUT FROM USERS -->
+                        <p>Studio available?</p>
+                        <div class="switch tiny">
+                            <input class="switch-input" id="studioCheck" type="checkbox" name="studioCheck"
+                                   ng-model="studioCheck">
+                            <label class="switch-paddle" for="studioCheck">
+                                <span class="show-for-sr">One Bedroom available?</span>
+                                <span class="switch-active" aria-hidden="true">Yes</span>
+                                <span class="switch-inactive" aria-hidden="true">No</span>
+                            </label>
+                        </div>
+                        <input type="text" id="studioPrice" name="studioPrice" ng-model="studioPrice"
+                               placeholder=" Studio price">
+                    </div>
+
+                    <input type="file" id="studio" name="studio"
+                           accept="image/*">
+                    <button style="width: 50px; height: 20px; padding: 2px; border-radius: 2px;"
+                            class="button" ng-click="studioImageUpload()">Upload
+                    </button>
+                </div>
+            </section> <!-- E OF S-->
+
+            <!--************************ STUDIO *************************-->
+            <section class="main">
+                <div>
+                    <div class="image" style="margin-bottom: 10px;">
+                        <img ng-src="php_Server/API/{{oneImage}}"> <!-- IMAGE DISPLAY-->
+
+                    </div>
+                    <div>
+                        <!-- INPUT FROM USERS -->
+                        <p>One bedroom available?</p>
+                        <div class="switch tiny">
+                            <input class="switch-input" id="oneCheck" type="checkbox" name="oneCheck"
+                                   ng-model="oneCheck">
+                            <label class="switch-paddle" for="oneCheck">
+                                <span class="show-for-sr">One Bedroom available?</span>
+                                <span class="switch-active" aria-hidden="true">Yes</span>
+                                <span class="switch-inactive" aria-hidden="true">No</span>
+                            </label>
+                        </div>
+                        <input type="text" id="onePrice" name="onePrice" ng-model="onePrice"
+                               placeholder=" One bedroom price">
+                    </div>
+
+                    <input type="file" id="oneImage" name="oneImage"
+                           accept="image/*">
+                    <button style="width: 50px; height: 20px; padding: 2px; border-radius: 2px;"
+                            class="button" ng-click="oneBedroomSubmit()">Upload
+                    </button>
+                </div>
+            </section> <!-- E OF S-->
+
+            <!-- TWO bedroom -->
+            <section class="main">
+                <div>
+                    <div class="image" style="margin-bottom: 10px;">
+                        <img ng-src="php_Server/API/{{twoImage}}"> <!-- IMAGE DISPLAY-->
+
+                    </div>
+                    <div>
+                        <!-- INPUT FROM USERS -->
+                        <p>Two available?</p>
+                        <div class="switch tiny">
+                            <input class="switch-input" id="two" type="checkbox" name="twoCheck"
+                                   ng-model="twoCheck">
+                            <label class="switch-paddle" for="two">
+                                <span class="show-for-sr">One Bedroom available?</span>
+                                <span class="switch-active" aria-hidden="true">Yes</span>
+                                <span class="switch-inactive" aria-hidden="true">No</span>
+                            </label>
+                        </div>
+                        <input type="text" id="twoPrice" name="twoPrice" ng-model="twoPrice"
+                               placeholder=" Two price">
+                    </div>
+
+                    <input type="file" id="twoImage" name="twoImage"
+                           accept="image/*">
+                    <button style="width: 50px; height: 20px; padding: 2px; border-radius: 2px;"
+                            class="button" ng-click="twoBedroomSubmit()">Upload
+                    </button>
+                </div>
+            </section> <!-- E O F-->
 
 
-            <form ng-click="uploadImage();">
+            <!-- THREE-->
+            <section class="main">
+                <div>
+                    <div class="image" style="margin-bottom: 10px;">
+                        <img ng-src="php_Server/API/{{threeImage}}"> <!-- IMAGE DISPLAY-->
 
-                <input type="file" name="upload_Pic" alt="image" src="" accept="image/*">
+                    </div>
+                    <div>
+                        <!-- INPUT FROM USERS -->
+                        <p>Three available?</p>
+                        <div class="switch tiny">
+                            <input class="switch-input" id="three" type="checkbox" name="threeCheck"
+                                   ng-model="threeCheck">
+                            <label class="switch-paddle" for="three">
+                                <span class="show-for-sr">One Bedroom available?</span>
+                                <span class="switch-active" aria-hidden="true">Yes</span>
+                                <span class="switch-inactive" aria-hidden="true">No</span>
+                            </label>
+                        </div>
+                        <input type="text" id="threePrice" name="threePrice" ng-model="threePrice"
+                               placeholder=" Three bedroom price">
+                    </div>
 
-                <button type="file" for="uploadRoomImage" class="button"> Upload File</button>
-                <input type="file" id="uploadRoomImage" class="show-for-sr">
+                    <input type="file" id="threeImage" name="threeImage"
+                           accept="image/*">
+                    <button style="width: 50px; height: 20px; padding: 2px; border-radius: 2px;"
+                            class="button" ng-click="threeBedroomSubmit()">Upload
+                    </button>
+                </div>
+            </section> <!-- E O F-->
 
-            </form>
-        </section>
-        <!--End of Upload image-->
+        </form>
     </section>
-</section>
 
-<div class="columns privacy-style">
-    <a href="#">Privacy Policy</a> </p>
-</div>
+    <div class="columns privacy-style">
+        <a href="#">Privacy Policy</a> </p>
+    </div>
 </section>
